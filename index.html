@@ -406,6 +406,111 @@
     }
 
     /* ============================================
+       EXPÉRIENCE PROFESSIONNELLE
+    ============================================ */
+    .experience-section {
+      position: relative;
+      padding: 5rem 2rem;
+      overflow: hidden;
+      background: #0a0a0f;
+    }
+    .experience-bg {
+      position: absolute;
+      inset: 0;
+      background: #0d1520 url('archeli_stage_bg.jpg') center/cover no-repeat;
+      z-index: 0;
+    }
+    .experience-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(105deg,
+        rgba(10, 10, 15, 0.94) 0%,
+        rgba(10, 10, 15, 0.82) 42%,
+        rgba(10, 10, 15, 0.65) 100%);
+      z-index: 1;
+    }
+    .experience-inner {
+      position: relative;
+      z-index: 2;
+    }
+    .experience-card {
+      max-width: 820px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      padding: 2rem 2.25rem;
+      backdrop-filter: blur(12px);
+    }
+    .experience-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1.25rem;
+      margin-bottom: 1.75rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .experience-logo-wrap {
+      flex-shrink: 0;
+      width: 88px;
+      height: 88px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.96);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    }
+    .experience-logo-wrap img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+    .experience-meta { flex: 1; min-width: 200px; }
+    .experience-company {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 0.35rem;
+      letter-spacing: -0.02em;
+    }
+    .experience-role {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #60a5fa;
+      margin-bottom: 0.5rem;
+    }
+    .experience-dates {
+      font-size: 0.85rem;
+      color: #909090;
+      font-weight: 500;
+    }
+    .experience-dates i { color: #3b82f6; margin-right: 0.35rem; }
+    .experience-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .experience-list li {
+      position: relative;
+      padding: 0.45rem 0 0.45rem 1.35rem;
+      color: #c4c4c4;
+      font-size: 0.92rem;
+      line-height: 1.65;
+    }
+    .experience-list li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: #3b82f6;
+      font-weight: 700;
+    }
+
+    /* ============================================
        PROJETS
     ============================================ */
     .projets { background: #0a0a0f; }
@@ -822,6 +927,25 @@
     body.light-mode .timeline-card-text { color: #777; }
     body.light-mode .timeline-card-image { opacity: 0.85; }
 
+    body.light-mode .experience-section { background: #f5f7fa; }
+    body.light-mode .experience-bg { background-color: #e8edf5; }
+    body.light-mode .experience-bg::after {
+      background: linear-gradient(105deg,
+        rgba(245, 247, 250, 0.95) 0%,
+        rgba(245, 247, 250, 0.88) 45%,
+        rgba(245, 247, 250, 0.72) 100%);
+    }
+    body.light-mode .experience-card {
+      background: rgba(255, 255, 255, 0.92);
+      border-color: rgba(0, 0, 0, 0.08);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06);
+    }
+    body.light-mode .experience-header { border-bottom-color: rgba(0, 0, 0, 0.08); }
+    body.light-mode .experience-company { color: #111; }
+    body.light-mode .experience-role { color: #2563eb; }
+    body.light-mode .experience-dates { color: #666; }
+    body.light-mode .experience-list li { color: #444; }
+
     /* Projets */
     body.light-mode .projet-badge {
       background: rgba(255,255,255,0.9); border-color: rgba(0,0,0,0.1);
@@ -998,6 +1122,7 @@
       <ul class="nav-links" id="navLinks">
         <li><a href="#profil">Profil</a></li>
         <li><a href="#formation">Formation</a></li>
+        <li><a href="#experience">Expérience</a></li>
         <li><a href="#competences">Compétences</a></li>
         <li><a href="#certifications">Certifications</a></li>
         <li><a href="#parcours">Parcours</a></li>
@@ -1173,6 +1298,44 @@
           </div>
         </div>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== EXPÉRIENCE PROFESSIONNELLE ==================== -->
+  <!-- Images : archeli_logo.png et archeli_stage_bg.jpg à la racine du dépôt (même dossier que index.html). -->
+  <section class="experience-section" id="experience">
+    <div class="experience-bg" aria-hidden="true"></div>
+    <div class="section-container experience-inner">
+      <div class="section-line" data-aos="fade-up"></div>
+      <h2 class="section-title" data-aos="fade-up" data-aos-delay="50">Expérience <span>professionnelle</span></h2>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Stage en entreprise</p>
+
+      <div class="experience-card" data-aos="fade-up" data-aos-delay="150">
+        <div class="experience-header">
+          <div class="experience-logo-wrap">
+            <img src="archeli_logo.png" alt="Logo SAS Archeli" width="120" height="120" loading="lazy">
+          </div>
+          <div class="experience-meta">
+            <div class="experience-company">SAS Archeli</div>
+            <div class="experience-role">Stage — conception &amp; bureau d’études (SOLIDWORKS)</div>
+            <div class="experience-dates"><i class="far fa-calendar-alt"></i> Avril 2026 — Juin 2026</div>
+          </div>
+        </div>
+        <ul class="experience-list">
+          <li>Modélisation 3D paramétrique des bains nordiques sous SOLIDWORKS.</li>
+          <li>Réalisation de relevés précis en atelier (pièces bois, assemblages, cuves, équipements).</li>
+          <li>Modélisation complète pièces et ensembles.</li>
+          <li>Création de plans d’ensemble et plans de détail cotés.</li>
+          <li>Réalisation de vues éclatées et coupes techniques.</li>
+          <li>Préparation de dossiers prêts pour la fabrication.</li>
+          <li>Création de fiches techniques produits.</li>
+          <li>Élaboration des nomenclatures (bois, quincaillerie, équipements, options).</li>
+          <li>Formalisation des procédures de fabrication.</li>
+          <li>Rédaction de plans d’installation pour les clients.</li>
+          <li>Observation des méthodes actuelles, identification des points d’optimisation, proposition d’améliorations applicables.</li>
+          <li>Participation à la structuration progressive de l’atelier.</li>
+        </ul>
       </div>
     </div>
   </section>
