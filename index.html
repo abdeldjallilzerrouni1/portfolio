@@ -536,12 +536,30 @@
       object-fit: contain;
     }
     .experience-meta { flex: 1; min-width: 200px; }
+    .experience-company-line {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 0.35rem 0.85rem;
+      margin-bottom: 0.4rem;
+    }
     .experience-company {
       font-size: 1.35rem;
       font-weight: 800;
       color: #fff;
-      margin-bottom: 0.35rem;
+      margin: 0;
       letter-spacing: -0.02em;
+    }
+    .experience-location-inline {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #8a9cae;
+      letter-spacing: 0.01em;
+    }
+    .experience-location-inline i {
+      color: #3b82f6;
+      margin-right: 0.35rem;
+      font-size: 0.85em;
     }
     .experience-role {
       font-size: 0.95rem;
@@ -1023,6 +1041,7 @@
     }
     body.light-mode .experience-header { border-bottom-color: rgba(0, 0, 0, 0.08); }
     body.light-mode .experience-company { color: #111; }
+    body.light-mode .experience-location-inline { color: #5c6570; }
     body.light-mode .experience-role { color: #2563eb; }
     body.light-mode .experience-dates { color: #666; }
     body.light-mode .experience-list li { color: #444; }
@@ -1397,7 +1416,10 @@
             <img src="archeli_logo.png" alt="Logo SAS Archeli" width="120" height="120" loading="lazy">
           </div>
           <div class="experience-meta">
-            <div class="experience-company">SAS Archeli</div>
+            <div class="experience-company-line">
+              <span class="experience-company">SAS Archeli</span>
+              <span class="experience-location-inline"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Emplacement du stage · Tavaux, Bourgogne-Franche-Comté</span>
+            </div>
             <div class="experience-role">Stagiaire-Mise en plan technique &amp; la modélisation 3D paramétrique-Bains nordiques</div>
             <div class="experience-dates"><i class="far fa-calendar-alt"></i> Avril 2026 — Juin 2026</div>
           </div>
