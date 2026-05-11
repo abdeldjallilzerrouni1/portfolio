@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <script type="importmap">
   { "imports": {
       "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
@@ -59,6 +60,31 @@
       transition: color 0.3s;
     }
     .nav-links a:hover { color: #fff; }
+    .nav-links .nav-3d-link {
+      width: 48px;
+      height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #1d4ed8, #3b82f6);
+      border: 1px solid rgba(147, 197, 253, 0.7);
+      box-shadow: 0 0 18px rgba(59, 130, 246, 0.6), 0 0 42px rgba(37, 99, 235, 0.25);
+      transform: rotate(45deg);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .nav-links .nav-3d-link span {
+      transform: rotate(-45deg);
+      color: #fff;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .nav-links .nav-3d-link:hover {
+      transform: rotate(45deg) scale(1.06);
+      box-shadow: 0 0 24px rgba(59, 130, 246, 0.85), 0 0 48px rgba(29, 78, 216, 0.35);
+    }
     .nav-toggle { display: none; background: none; border: none; color: #fff; font-size: 1.4rem; cursor: pointer; }
 
     /* ============================================
@@ -405,194 +431,6 @@
       text-align: left;
     }
 
-    /* Onglets dans une carte timeline (ex. Poitiers : Université / Stage) */
-    .timeline-card-tabs { padding-top: 0; }
-    .timeline-tabs-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.45rem;
-      padding: 0.7rem 0.85rem 0.6rem;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
-      background: rgba(0, 0, 0, 0.2);
-    }
-    .timeline-tab {
-      font-family: inherit;
-      font-size: 0.68rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      padding: 0.32rem 0.7rem;
-      border-radius: 999px;
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      background: rgba(255, 255, 255, 0.05);
-      color: #888;
-      cursor: pointer;
-      transition: color 0.2s, border-color 0.2s, background 0.2s;
-    }
-    .timeline-tab:hover {
-      color: #ccc;
-      border-color: rgba(59, 130, 246, 0.4);
-    }
-    .timeline-tab.active {
-      background: rgba(59, 130, 246, 0.22);
-      border-color: rgba(59, 130, 246, 0.5);
-      color: #93c5fd;
-    }
-    .timeline-tab-panel { display: none; }
-    .timeline-tab-panel.active { display: block; }
-    .timeline-tab-panel .timeline-card-image {
-      border-radius: 0;
-    }
-    .timeline-stage-banner {
-      height: 148px;
-      position: relative;
-      background:
-        linear-gradient(180deg, rgba(10, 10, 15, 0.2) 0%, rgba(10, 10, 15, 0.88) 100%),
-        url('archeli_stage_bg.jpg') center/cover no-repeat;
-    }
-    .timeline-stage-banner-caption {
-      position: absolute;
-      bottom: 0.55rem;
-      left: 0.75rem;
-      right: 0.75rem;
-      display: flex;
-      align-items: center;
-      gap: 0.55rem;
-    }
-    .timeline-stage-banner-caption img {
-      width: 38px;
-      height: 38px;
-      object-fit: contain;
-      background: rgba(255, 255, 255, 0.96);
-      border-radius: 9px;
-      padding: 5px;
-      flex-shrink: 0;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
-    }
-    .timeline-stage-banner-caption span {
-      font-size: 0.72rem;
-      font-weight: 800;
-      color: #fff;
-      line-height: 1.3;
-      text-shadow: 0 1px 10px rgba(0, 0, 0, 0.85);
-    }
-    .timeline-card-title-sm {
-      font-size: 1.02rem;
-      margin-top: 0.15rem;
-    }
-    .timeline-card-text a.inline-link {
-      color: #60a5fa;
-      font-weight: 600;
-      border-bottom: 1px solid rgba(96, 165, 250, 0.4);
-    }
-    .timeline-card-text a.inline-link:hover { color: #93c5fd; }
-
-    /* ============================================
-       EXPÉRIENCE PROFESSIONNELLE
-    ============================================ */
-    .experience-section {
-      position: relative;
-      padding: 5rem 2rem;
-      overflow: hidden;
-      background: #0d0d14;
-    }
-    .experience-inner {
-      position: relative;
-    }
-    .experience-card {
-      max-width: 820px;
-      margin: 0 auto;
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 20px;
-      padding: 2rem 2.25rem;
-      backdrop-filter: blur(12px);
-    }
-    .experience-header {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 1.25rem;
-      margin-bottom: 1.75rem;
-      padding-bottom: 1.5rem;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    }
-    .experience-logo-wrap {
-      flex-shrink: 0;
-      width: 88px;
-      height: 88px;
-      border-radius: 16px;
-      background: rgba(255, 255, 255, 0.96);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 10px;
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
-    }
-    .experience-logo-wrap img {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain;
-    }
-    .experience-meta { flex: 1; min-width: 200px; }
-    .experience-company-line {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: baseline;
-      gap: 0.35rem 0.85rem;
-      margin-bottom: 0.4rem;
-    }
-    .experience-company {
-      font-size: 1.35rem;
-      font-weight: 800;
-      color: #fff;
-      margin: 0;
-      letter-spacing: -0.02em;
-    }
-    .experience-location-inline {
-      font-size: 0.82rem;
-      font-weight: 600;
-      color: #8a9cae;
-      letter-spacing: 0.01em;
-    }
-    .experience-location-inline i {
-      color: #3b82f6;
-      margin-right: 0.35rem;
-      font-size: 0.85em;
-    }
-    .experience-role {
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: #60a5fa;
-      margin-bottom: 0.5rem;
-    }
-    .experience-dates {
-      font-size: 0.85rem;
-      color: #909090;
-      font-weight: 500;
-    }
-    .experience-dates i { color: #3b82f6; margin-right: 0.35rem; }
-    .experience-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    .experience-list li {
-      position: relative;
-      padding: 0.45rem 0 0.45rem 1.35rem;
-      color: #c4c4c4;
-      font-size: 0.92rem;
-      line-height: 1.65;
-    }
-    .experience-list li::before {
-      content: '▸';
-      position: absolute;
-      left: 0;
-      color: #3b82f6;
-      font-weight: 700;
-    }
-
     /* ============================================
        PROJETS
     ============================================ */
@@ -890,6 +728,33 @@
       background: rgba(255, 255, 255, 0.9);
       border-bottom: 1px solid rgba(0,0,0,0.08);
     }
+    .section-3d { background: #0a0a0f; }
+    .model-3d-card {
+      background: linear-gradient(135deg, rgba(59,130,246,0.08), rgba(2,6,23,0.85));
+      border: 1px solid rgba(59,130,246,0.25);
+      border-radius: 16px;
+      padding: 1.25rem;
+      box-shadow: 0 14px 40px rgba(2, 6, 23, 0.35);
+    }
+    .model-3d-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #e5e7eb;
+      margin-bottom: 0.85rem;
+    }
+    .model-3d-viewer {
+      width: 100%;
+      height: 520px;
+      border-radius: 12px;
+      background: radial-gradient(circle at 50% 20%, rgba(96,165,250,0.18), rgba(15,23,42,0.9));
+      border: 1px solid rgba(148, 163, 184, 0.25);
+    }
+    .model-3d-help {
+      margin-top: 0.75rem;
+      font-size: 0.9rem;
+      color: #94a3b8;
+    }
+
     body.light-mode .nav-logo { color: #111; }
     body.light-mode .nav-links a { color: #666; }
     body.light-mode .nav-links a:hover { color: #111; }
@@ -1002,6 +867,21 @@
     /* Langues */
     body.light-mode .langue-name { color: #222; }
     body.light-mode .langue-level { color: #2563eb; }
+    body.light-mode .nav-links .nav-3d-link {
+      box-shadow: 0 0 16px rgba(37, 99, 235, 0.45), 0 0 32px rgba(59, 130, 246, 0.22);
+    }
+    body.light-mode .section-3d { background: #f8fafc; }
+    body.light-mode .model-3d-card {
+      background: linear-gradient(145deg, rgba(59,130,246,0.08), rgba(255,255,255,0.95));
+      border-color: rgba(59,130,246,0.18);
+      box-shadow: 0 10px 30px rgba(2, 6, 23, 0.08);
+    }
+    body.light-mode .model-3d-title { color: #111; }
+    body.light-mode .model-3d-viewer {
+      background: radial-gradient(circle at 50% 20%, rgba(191,219,254,0.9), rgba(241,245,249,1));
+      border-color: rgba(148, 163, 184, 0.35);
+    }
+    body.light-mode .model-3d-help { color: #475569; }
 
     /* Timeline */
     body.light-mode .timeline::before { background: rgba(59,130,246,0.15); }
@@ -1009,42 +889,6 @@
     body.light-mode .timeline-card-title { color: #111; }
     body.light-mode .timeline-card-text { color: #777; }
     body.light-mode .timeline-card-image { opacity: 0.85; }
-    body.light-mode .timeline-tabs-row {
-      background: rgba(0, 0, 0, 0.04);
-      border-bottom-color: rgba(0, 0, 0, 0.08);
-    }
-    body.light-mode .timeline-tab {
-      background: rgba(0, 0, 0, 0.04);
-      border-color: rgba(0, 0, 0, 0.1);
-      color: #666;
-    }
-    body.light-mode .timeline-tab.active {
-      background: rgba(59, 130, 246, 0.12);
-      border-color: rgba(59, 130, 246, 0.35);
-      color: #2563eb;
-    }
-    body.light-mode .timeline-stage-banner {
-      background:
-        linear-gradient(180deg, rgba(245, 247, 250, 0.15) 0%, rgba(245, 247, 250, 0.92) 100%),
-        url('archeli_stage_bg.jpg') center/cover no-repeat;
-    }
-    body.light-mode .timeline-stage-banner-caption span {
-      color: #111;
-      text-shadow: 0 1px 12px rgba(255, 255, 255, 0.9);
-    }
-
-    body.light-mode .experience-section { background: #f5f7fa; }
-    body.light-mode .experience-card {
-      background: rgba(255, 255, 255, 0.92);
-      border-color: rgba(0, 0, 0, 0.08);
-      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06);
-    }
-    body.light-mode .experience-header { border-bottom-color: rgba(0, 0, 0, 0.08); }
-    body.light-mode .experience-company { color: #111; }
-    body.light-mode .experience-location-inline { color: #5c6570; }
-    body.light-mode .experience-role { color: #2563eb; }
-    body.light-mode .experience-dates { color: #666; }
-    body.light-mode .experience-list li { color: #444; }
 
     /* Projets */
     body.light-mode .projet-badge {
@@ -1107,56 +951,8 @@
     }
 
     /* ============================================
-       CERTIFICATIONS
-       ============================================ */
-    .certifications { background: #0d0d14; }
-    .certifications-grid {
-      display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center;
-    }
-    .cert-card {
-      width: 180px; display: flex; flex-direction: column; align-items: center;
-      cursor: pointer; transition: all 0.3s;
-    }
-    .cert-card:hover { transform: translateY(-5px); }
-    .cert-circle {
-      width: 160px; height: 160px; border-radius: 50%;
-      overflow: hidden;
-      border: 3px solid rgba(59,130,246,0.3);
-      box-shadow: 0 8px 30px rgba(59,130,246,0.12);
-      transition: all 0.3s;
-      display: flex; align-items: center; justify-content: center;
-      background: #fff;
-    }
-    .cert-card:hover .cert-circle {
-      border-color: #3b82f6;
-      box-shadow: 0 12px 40px rgba(59,130,246,0.25);
-    }
-    .cert-circle img {
-      width: 100%; height: 100%; object-fit: cover;
-    }
-    .cert-label {
-      margin-top: 1rem; text-align: center;
-      font-weight: 700; font-size: 0.9rem; color: #fff;
-      line-height: 1.4;
-    }
-    .cert-date {
-      font-size: 0.8rem; color: #60a5fa; font-weight: 600;
-      margin-top: 0.3rem;
-    }
-    body.light-mode .certifications { background: #fff; }
-    body.light-mode .cert-circle {
-      border-color: rgba(59,130,246,0.2);
-      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-    }
-    body.light-mode .cert-card:hover .cert-circle {
-      box-shadow: 0 8px 30px rgba(59,130,246,0.15);
-    }
-    body.light-mode .cert-label { color: #222; }
-    body.light-mode .cert-date { color: #2563eb; }
-
-    /* ============================================
        BACK TO TOP BUTTON
-       ============================================ */
+    ============================================ */
     #backToTop {
       position: fixed; bottom: 2rem; right: 2rem;
       width: 46px; height: 46px;
@@ -1200,6 +996,7 @@
         padding: 1.5rem 2rem; gap: 1rem;
         border-bottom: 1px solid rgba(255,255,255,0.06);
       }
+      .nav-links .nav-3d-link { width: 44px; height: 44px; }
       .nav-toggle { display: block; }
       .timeline::before { left: 20px; }
       .timeline-item { width: 100%; left: 0 !important; text-align: left !important; padding-left: 3rem !important; padding-right: 0 !important; }
@@ -1210,6 +1007,7 @@
       .projet-modal { padding: 0.5rem; }
       .code-panel pre { font-size: 0.7rem; padding: 1rem; }
       #engine-canvas.loaded { opacity: 0.10; }
+      .model-3d-viewer { height: 360px; }
     }
   </style>
 </head>
@@ -1222,9 +1020,8 @@
       <ul class="nav-links" id="navLinks">
         <li><a href="#profil">Profil</a></li>
         <li><a href="#formation">Formation</a></li>
-        <li><a href="#experience">Expérience</a></li>
         <li><a href="#competences">Compétences</a></li>
-        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#section-3d" class="nav-3d-link" aria-label="Aller à la section 3D"><span>3D</span></a></li>
         <li><a href="#parcours">Parcours</a></li>
         <li><a href="#projets">Projets</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -1246,15 +1043,14 @@
     <div id="engine-canvas"></div>
     <div class="hero-content">
       <div class="hero-text">
-        <div class="hero-badge"><i class="fas fa-cogs"></i>&nbsp; Ouvert aux opportunités d'alternance</div>
+        <div class="hero-badge"><i class="fas fa-cogs"></i>&nbsp; Ouvert aux opportunités de stage</div>
         <h1 class="hero-name">Abdeldjallil<br><span>Seif E. Zerrouni</span></h1>
         <p class="hero-title">Étudiant en Génie Mécanique · L3 Université de Poitiers</p>
         <p class="hero-desc">
-          Passionné par l'ingénierie mécanique, je cherche une alternance à partir de septembre 2026 pour confronter mes acquis universitaires au monde industriel. Ce portfolio regroupe un aperçu de mes projets d'ingénierie réalisés au fil de mon parcours.
+          Passionné par l'ingénierie mécanique, je cherche un stage à partir d'avril 2026 pour confronter mes acquis universitaires au monde industriel. Ce portfolio regroupe un aperçu de mes projets d'ingénierie réalisés au fil de mon parcours.
         </p>
         <div class="hero-buttons">
           <a href="#projets" class="btn btn-primary"><i class="fas fa-briefcase"></i> Mes Projets</a>
-          <a href="#experience" class="btn btn-outline"><i class="fas fa-building"></i> Mon expérience</a>
           <a href="#contact" class="btn btn-outline"><i class="fas fa-envelope"></i> Me Contacter</a>
         </div>
       </div>
@@ -1271,7 +1067,7 @@
       <h2 class="section-title" data-aos="fade-up" data-aos-delay="50">À <span>Propos</span></h2>
       <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Mon parcours et mes ambitions</p>
       <div class="profil-content" data-aos="fade-up" data-aos-delay="150">
-        Étudiant en troisième année de Licence Génie Mécanique à l'Université de Poitiers, je bénéficie d'un parcours international ayant débuté en Pologne, à Kielce University of Technology, où j'ai suivi deux années de formation en anglais. Cette expérience m'a permis d'acquérir une aisance en anglais, aussi bien à l'oral qu'à l'écrit, notamment en anglais technique, et de m'adapter pleinement à un environnement bilingue. J'y ai également acquis des bases solides en SolidWorks ainsi qu'une première expérience en programmation CNC. À Poitiers, ma maîtrise de SolidWorks s'est approfondie au fil de nombreux projets de bureau d'études, allant de la conception de pièces mécanosoudées aux simulations de résistance des matériaux. J'ai également développé une solide compétence en automatisme — analyse de cahier des charges, rédaction de GRAFCET — avec la programmation en Structured Text sur B&R Automation Studio. Désireux de confronter mes acquis au monde professionnel, je suis activement à la recherche d'une alternance en ingénierie mécanique à partir de septembre 2026.
+        Étudiant en troisième année de Licence Génie Mécanique à l'Université de Poitiers, je bénéficie d'un parcours international ayant débuté en Pologne, à Kielce University of Technology, où j'ai suivi deux années de formation en anglais. Cette expérience m'a permis d'acquérir une aisance en anglais, aussi bien à l'oral qu'à l'écrit, notamment en anglais technique, et de m'adapter pleinement à un environnement bilingue. J'y ai également acquis des bases solides en SolidWorks ainsi qu'une première expérience en programmation CNC. À Poitiers, ma maîtrise de SolidWorks s'est approfondie au fil de nombreux projets de bureau d'études, allant de la conception de pièces mécanosoudées aux simulations de résistance des matériaux. J'ai également développé une solide compétence en automatisme — analyse de cahier des charges, rédaction de GRAFCET — avec la programmation en Structured Text sur B&R Automation Studio. Désireux de confronter mes acquis au monde professionnel, je suis activement à la recherche d'un stage en ingénierie mécanique à partir d'avril 2026.
       </div>
     </div>
   </section>
@@ -1403,46 +1199,6 @@
     </div>
   </section>
 
-  <!-- ==================== EXPÉRIENCE PROFESSIONNELLE ==================== -->
-  <!-- Logo : archeli_logo.png. Image de mise en avant du stage : archeli_stage_bg.jpg (onglet Parcours → Poitiers → Stage). -->
-  <section class="experience-section" id="experience">
-    <div class="section-container experience-inner">
-      <div class="section-line" data-aos="fade-up"></div>
-      <h2 class="section-title" data-aos="fade-up" data-aos-delay="50">Expérience <span>professionnelle</span></h2>
-      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Stage en entreprise</p>
-
-      <div class="experience-card" data-aos="fade-up" data-aos-delay="150">
-        <div class="experience-header">
-          <div class="experience-logo-wrap">
-            <img src="archeli_logo.png" alt="Logo SAS Archeli" width="120" height="120" loading="lazy">
-          </div>
-          <div class="experience-meta">
-            <div class="experience-company-line">
-              <span class="experience-company">SAS Archeli</span>
-              <span class="experience-location-inline"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Tavaux, Bourgogne-Franche-Comté</span>
-            </div>
-            <div class="experience-role">Stagiaire-Mise en plan technique &amp; la modélisation 3D paramétrique-Bains nordiques</div>
-            <div class="experience-dates"><i class="far fa-calendar-alt"></i> Avril 2026 — Juin 2026</div>
-          </div>
-        </div>
-        <ul class="experience-list">
-          <li>Modélisation 3D paramétrique des bains nordiques sous SOLIDWORKS.</li>
-          <li>Réalisation de relevés précis en atelier (pièces bois, assemblages, cuves, équipements).</li>
-          <li>Modélisation complète pièces et ensembles.</li>
-          <li>Création de plans d’ensemble et plans de détail cotés.</li>
-          <li>Réalisation de vues éclatées et coupes techniques.</li>
-          <li>Préparation de dossiers prêts pour la fabrication.</li>
-          <li>Création de fiches techniques produits.</li>
-          <li>Élaboration des nomenclatures (bois, quincaillerie, équipements, options).</li>
-          <li>Formalisation des procédures de fabrication.</li>
-          <li>Rédaction de plans d’installation pour les clients.</li>
-          <li>Observation des méthodes actuelles, identification des points d’optimisation, proposition d’améliorations applicables.</li>
-          <li>Participation à la structuration progressive de l’atelier.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
   <!-- ==================== COMPÉTENCES ==================== -->
   <section class="competences" id="competences">
     <div class="section-container">
@@ -1537,27 +1293,6 @@
     </div>
   </section>
 
-  <!-- ==================== CERTIFICATIONS ==================== -->
-  <section class="certifications" id="certifications">
-    <div class="section-container">
-      <div class="section-line" data-aos="fade-up"></div>
-      <h2 class="section-title" data-aos="fade-up" data-aos-delay="50">Mes <span>Certifications</span></h2>
-      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Certifications professionnelles obtenues</p>
-
-      <div class="certifications-grid">
-
-        <div class="cert-card" onclick="openModal('modalCSWA')" data-aos="fade-up" data-aos-delay="150">
-          <div class="cert-circle">
-            <img src="cswa_logo.png" alt="CSWA - SolidWorks Design Associate">
-          </div>
-          <div class="cert-label">CSWA — SolidWorks<br>Design Associate</div>
-          <div class="cert-date">Février 2026</div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
   <!-- ==================== TIMELINE / PARCOURS ==================== -->
   <section class="timeline-section" id="parcours">
     <div class="section-container">
@@ -1582,38 +1317,17 @@
           </div>
         </div>
 
-        <!-- Poitiers (onglets Université / Stage) -->
+        <!-- Poitiers -->
         <div class="timeline-item" data-aos="fade-left" data-aos-delay="200">
           <div class="timeline-dot"></div>
-          <div class="timeline-card timeline-card-tabs">
-            <div class="timeline-tabs-row" role="tablist" aria-label="Poitiers : formation ou stage">
-              <button type="button" class="timeline-tab active" role="tab" aria-selected="true" data-timeline-tab="poitiers-uni" id="tab-poitiers-uni">Université</button>
-              <button type="button" class="timeline-tab" role="tab" aria-selected="false" data-timeline-tab="poitiers-stage" id="tab-poitiers-stage">Stage</button>
-            </div>
-            <div class="timeline-tab-panel active" role="tabpanel" data-timeline-panel="poitiers-uni" aria-labelledby="tab-poitiers-uni">
-              <img src="ville2.png" alt="Poitiers, France" class="timeline-card-image">
-              <div class="timeline-card-body">
-                <div class="timeline-year">2025 — Présent</div>
-                <h3 class="timeline-card-title">Université de Poitiers</h3>
-                <p class="timeline-card-text">
-                  En intégrant l'Université de Poitiers en L3, j'ai eu la chance de travailler sur de nombreux projets de conception mécanique en travaux pratiques, ce qui a considérablement renforcé ma maîtrise de SolidWorks. J'ai également découvert l'automatisme avec B&R Automation Studio et acquis de bonnes bases en programmation ST. Ces projets concrets m'ont permis de développer une approche rigoureuse de l'ingénierie mécanique.
-                </p>
-              </div>
-            </div>
-            <div class="timeline-tab-panel" role="tabpanel" data-timeline-panel="poitiers-stage" aria-labelledby="tab-poitiers-stage">
-              <div class="timeline-stage-banner">
-                <div class="timeline-stage-banner-caption">
-                  <img src="archeli_logo.png" alt="" width="38" height="38" loading="lazy">
-                  <span>SAS Archeli — Bains nordiques</span>
-                </div>
-              </div>
-              <div class="timeline-card-body">
-                <div class="timeline-year">Avril 2026 — Juin 2026</div>
-                <h3 class="timeline-card-title timeline-card-title-sm">Stage — SAS Archeli</h3>
-                <p class="timeline-card-text">
-                  Stagiaire : mise en plan technique et modélisation 3D paramétrique (SOLIDWORKS), relevés atelier, plans, nomenclatures et dossiers fabrication. <a class="inline-link" href="#experience">Voir le détail de la mission ↓</a>
-                </p>
-              </div>
+          <div class="timeline-card">
+            <img src="ville2.png" alt="Poitiers, France" class="timeline-card-image">
+            <div class="timeline-card-body">
+              <div class="timeline-year">2025 — Présent</div>
+              <h3 class="timeline-card-title">Université de Poitiers</h3>
+              <p class="timeline-card-text">
+                En intégrant l'Université de Poitiers en L3, j'ai eu la chance de travailler sur de nombreux projets de conception mécanique en travaux pratiques, ce qui a considérablement renforcé ma maîtrise de SolidWorks. J'ai également découvert l'automatisme avec B&R Automation Studio et acquis de bonnes bases en programmation ST. Ces projets concrets m'ont permis de développer une approche rigoureuse de l'ingénierie mécanique.
+              </p>
             </div>
           </div>
         </div>
@@ -1697,17 +1411,14 @@
           </div>
         </div>
 
-        <!-- ====== PROJET MECA : RENVOI CONIQUE AÉRONAUTIQUE ====== -->
-        <div class="projet-card clickable" data-type="meca" onclick="openModal('modalRenvoi')" data-aos="fade-up" data-aos-delay="400">
-          <span class="projet-badge">L3</span>
-          <div class="projet-image"><img src="renvoi_theme.png" alt="Renvoi conique aéronautique" style="width:100%;height:100%;object-fit:contain;background:#f5f5f5;padding:0.5rem;"></div>
+        <!-- ====== PROJET MECA : À VENIR ====== -->
+        <div class="projet-card" data-type="meca" data-aos="fade-up" data-aos-delay="400">
+          <div class="projet-image" style="display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.03);"><i class="fas fa-cogs" style="font-size:3rem;color:rgba(255,255,255,0.12);"></i></div>
           <div class="projet-body">
-            <div class="projet-title">Renvoi conique aéronautique — Conception et modélisation CAO</div>
-            <p class="projet-desc">Conception d'un renvoi conique aéronautique : dimensionnement des roulements, modélisation des engrenages et étude comparative de deux architectures de carter.</p>
+            <div class="projet-title">Projet à venir</div>
+            <p class="projet-desc">Un nouveau projet de génie mécanique sera ajouté prochainement.</p>
             <div class="projet-tags">
-              <span class="projet-tag">SolidWorks</span>
-              <span class="projet-tag">Dimensionnement</span>
-              <span class="projet-tag">Conception</span>
+              <span class="projet-tag">Génie Mécanique</span>
             </div>
           </div>
         </div>
@@ -2904,192 +2615,27 @@ END_TYPE</pre>
     </div>
   </div>
 
-  <!-- ==================== MODAL RENVOI CONIQUE ==================== -->
-  <div class="projet-modal" id="modalRenvoi">
-    <div class="modal-overlay" onclick="closeModal()"></div>
-    <div class="modal-content">
-      <button class="modal-close" onclick="closeModal()"><i class="fas fa-times"></i></button>
-
-      <div class="modal-header">
-        <h2>Renvoi conique aéronautique — Conception et modélisation CAO</h2>
-        <div class="modal-tags">
-          <span class="projet-tag">SolidWorks</span>
-          <span class="projet-tag">Dimensionnement</span>
-          <span class="projet-tag">Roulements SKF</span>
-          <span class="projet-tag">Engrenages coniques</span>
-          <span class="projet-tag">Conception carter</span>
-        </div>
+  <!-- ==================== 3D ==================== -->
+  <section class="section-3d" id="section-3d">
+    <div class="section-container">
+      <div class="section-line" data-aos="fade-up"></div>
+      <h2 class="section-title" data-aos="fade-up" data-aos-delay="50"><span>3D</span></h2>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Manipulation interactive de modèles</p>
+      <div class="model-3d-card" data-aos="fade-up" data-aos-delay="150">
+        <h3 class="model-3d-title">Téléphone mobile</h3>
+        <model-viewer
+          class="model-3d-viewer"
+          src="Mobile_Phone_2021.glb"
+          alt="Modèle 3D Téléphone mobile"
+          camera-controls
+          auto-rotate
+          shadow-intensity="1"
+          exposure="1">
+        </model-viewer>
+        <p class="model-3d-help">Clique et fais glisser pour tourner, utilise la molette pour zoomer.</p>
       </div>
-
-      <!-- ÉNONCÉ DU PROJET -->
-      <div class="modal-section">
-        <h3><i class="fas fa-file-pdf"></i> Énoncé du projet</h3>
-        <div style="border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,0.06);margin-bottom:0.5rem;">
-          <iframe src="renvoi_sujet.pdf" style="width:100%;height:600px;border:none;background:#1a1a24;"></iframe>
-        </div>
-        <p style="margin-top:0.75rem;font-size:0.85rem;color:#707070;">
-          <a href="renvoi_sujet.pdf" target="_blank" style="color:#60a5fa;"><i class="fas fa-download" style="margin-right:0.4rem;"></i>Télécharger le sujet (PDF)</a>
-        </p>
-      </div>
-
-      <!-- MISE EN CONTEXTE -->
-      <div class="modal-section">
-        <h3><i class="fas fa-bullseye"></i> Mise en contexte du système</h3>
-        <p>Le projet porte sur la conception d'un renvoi conique aéronautique répondant à des contraintes de durée de vie, fiabilité, vitesse de rotation et masse. Le schéma cinématique global a permis d'identifier l'architecture du mécanisme ainsi que les zones de reprise d'efforts nécessaires au dimensionnement.</p>
-        <div class="modal-img-grid single" style="margin-top:1.25rem;">
-          <div class="modal-img-container">
-            <img src="renvoi_schema_cinematique.png" alt="Schéma cinématique global du renvoi conique">
-            <div class="modal-img-caption">Schéma cinématique global du renvoi conique</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- DIMENSIONNEMENT DES ROULEMENTS -->
-      <div class="modal-section">
-        <h3><i class="fas fa-cogs"></i> Étude et dimensionnement des roulements</h3>
-        <p>L'objectif initial était de déterminer les roulements aux points A et B en respectant les exigences du cahier des charges. Deux solutions techniques ont été comparées :</p>
-        <ul>
-          <li>Un montage avec roulement rigide à billes et roulement à rouleaux cylindriques</li>
-          <li>Un montage avec deux roulements à billes à contact oblique en X</li>
-        </ul>
-        <p style="margin-top:0.75rem;">Les calculs ont été menés en conditions majorantes puis en conditions de fonctionnement réelles (cycle de vol). Aucune solution issue de la documentation initiale ne satisfaisant simultanément les critères de charge, vitesse et durée de vie, une recherche dans le catalogue SKF a été réalisée afin d'obtenir un compromis entre performances et masse.</p>
-        <div class="modal-img-grid" style="margin-top:1.25rem;">
-          <div class="modal-img-container">
-            <img src="renvoi_implantation_roulements.png" alt="Schéma d'implantation des roulements A et B">
-            <div class="modal-img-caption">Schéma d'implantation des roulements A et B</div>
-          </div>
-          <div class="modal-img-container">
-            <img src="renvoi_montage_x.png" alt="Montage en X des roulements">
-            <div class="modal-img-caption">Montage en X des roulements</div>
-          </div>
-        </div>
-        <p style="margin-top:0.75rem;">Les roulements retenus permettent de répondre aux contraintes tout en réduisant significativement la masse de l'ensemble.</p>
-      </div>
-
-      <!-- MODÉLISATION ENGRENAGES ET ARBRES -->
-      <div class="modal-section">
-        <h3><i class="fas fa-drafting-compass"></i> Modélisation des engrenages et des arbres</h3>
-        <p>Les pignons coniques ont été modélisés sous SolidWorks à partir des données fonctionnelles (nombre de dents, module, matériau). Les arbres ont été conçus avec des épaulements assurant le maintien axial des composants et la transmission du couple sans glissement.</p>
-        <div class="modal-img-grid" style="margin-top:1.25rem;">
-          <div class="modal-img-container">
-            <img src="renvoi_pignon_entree.png" alt="Pignon d'entrée – 31 dents">
-            <div class="modal-img-caption">Pignon d'entrée — 31 dents</div>
-          </div>
-          <div class="modal-img-container">
-            <img src="renvoi_pignon_sortie.png" alt="Pignon de sortie – 40 dents">
-            <div class="modal-img-caption">Pignon de sortie — 40 dents</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ASSEMBLAGE CAO TRANSMISSION -->
-      <div class="modal-section">
-        <h3><i class="fas fa-cubes"></i> Assemblage CAO de la transmission</h3>
-        <p>L'ensemble arbres – roulements – engrenages a été assemblé en respectant les tolérances et conditions de montage afin de garantir le bon positionnement des composants et la durée de vie du système.</p>
-        <div class="modal-img-grid single" style="margin-top:1.25rem;">
-          <div class="modal-img-container">
-            <img src="renvoi_assemblage_transmission.png" alt="Assemblage complet de la transmission">
-            <div class="modal-img-caption">Assemblage complet de la transmission</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- CARTER SYSTÈME 1 -->
-      <div class="modal-section">
-        <h3><i class="fas fa-box"></i> Conception du carter — Système 1 : plan de joint au milieu</h3>
-        <p>Un premier carter compact et simple à assembler a été conçu. Cependant, le positionnement du plan de joint dans la zone lubrifiée entraînait :</p>
-        <ul>
-          <li>Des risques de fuite d'huile</li>
-          <li>Un désalignement possible des roulements</li>
-          <li>Une diminution de la fiabilité</li>
-        </ul>
-        <div class="modal-img-grid" style="margin-top:1.25rem;">
-          <div class="modal-img-container">
-            <img src="renvoi_carter1_coupe.png" alt="Carter système 1 — vue en coupe">
-            <div class="modal-img-caption">Carter système 1 — vue en coupe</div>
-          </div>
-          <div class="modal-img-container">
-            <img src="renvoi_carter1_ext.png" alt="Carter système 1 — vue extérieure">
-            <div class="modal-img-caption">Carter système 1 — vue extérieure</div>
-          </div>
-        </div>
-        <div class="modal-img-grid single" style="margin-top:1rem;">
-          <div class="modal-img-container">
-            <img src="renvoi_carter1_interne.png" alt="Fonctionnement interne système 1">
-            <div class="modal-img-caption">Fonctionnement interne — système 1</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- CARTER SYSTÈME 2 — RETENU -->
-      <div class="modal-section">
-        <h3><i class="fas fa-check-double"></i> Système retenu — Carter avec plan de joint déporté</h3>
-        <p>La géométrie du carter a été modifiée afin de déplacer le plan de joint hors du volume lubrifié.</p>
-        <p style="margin-top:0.75rem;">Cette solution a été choisie car elle :</p>
-        <ul>
-          <li>Améliore fortement l'étanchéité</li>
-          <li>Garantit un meilleur alignement des roulements</li>
-          <li>Augmente la fiabilité du système</li>
-        </ul>
-        <p style="margin-top:0.75rem;">Ce qui constitue un critère prioritaire en aéronautique.</p>
-        <p style="margin-top:0.75rem;">En revanche, cette architecture rend le montage moins accessible et nécessite davantage d'opérations d'usinage. Une amélioration de la conception reste donc nécessaire afin d'optimiser l'accessibilité au montage et à la maintenance, dans une optique d'industrialisation.</p>
-        <div class="modal-img-grid single" style="margin-top:1.25rem;">
-          <div class="modal-img-container">
-            <img src="renvoi_carter2_geometrie.png" alt="Modification géométrique du carter — plan de joint déporté">
-            <div class="modal-img-caption">Modification géométrique du carter — plan de joint déporté</div>
-          </div>
-        </div>
-        <div class="modal-img-grid" style="margin-top:1rem;">
-          <div class="modal-img-container">
-            <img src="renvoi_carter2_interne.png" alt="Fonctionnement interne système 2">
-            <div class="modal-img-caption">Fonctionnement interne — système 2</div>
-          </div>
-          <div class="modal-img-container">
-            <img src="renvoi_carter2_complet.png" alt="Assemblage complet du système 2">
-            <div class="modal-img-caption">Assemblage complet — système retenu</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- RÉSULTAT FINAL -->
-      <div class="modal-section">
-        <h3><i class="fas fa-check-circle"></i> Résultat</h3>
-        <p>Ce projet a permis de développer un avant-projet complet de renvoi conique en appliquant une démarche de conception basée sur la comparaison de solutions, le dimensionnement réel de composants, l'intégration CAO et la gestion des compromis entre performance, masse, fiabilité et industrialisation.</p>
-      </div>
-
     </div>
-  </div>
-
-  <!-- ==================== MODAL CSWA ==================== -->
-  <div class="projet-modal" id="modalCSWA">
-    <div class="modal-overlay" onclick="closeModal()"></div>
-    <div class="modal-content">
-      <button class="modal-close" onclick="closeModal()"><i class="fas fa-times"></i></button>
-
-      <div class="modal-header">
-        <h2>CSWA — Certified SolidWorks Associate (Design)</h2>
-        <div class="modal-tags">
-          <span class="projet-tag">Dassault Systèmes</span>
-          <span class="projet-tag">SolidWorks</span>
-          <span class="projet-tag">Conception</span>
-          <span class="projet-tag">Février 2026</span>
-        </div>
-      </div>
-
-      <div class="modal-section">
-        <h3><i class="fas fa-certificate"></i> Certificat officiel</h3>
-        <p>Certification professionnelle délivrée par Dassault Systèmes, attestant des compétences en conception mécanique assistée par ordinateur avec SolidWorks.</p>
-        <p style="margin-top:0.5rem;"><strong>Identifiant :</strong> C-37C9EJWGR5</p>
-        <div style="border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,0.06);margin-top:1.25rem;">
-          <iframe src="cswa_certificate.pdf" style="width:100%;height:700px;border:none;background:#1a1a24;"></iframe>
-        </div>
-        <p style="margin-top:0.75rem;font-size:0.85rem;color:#707070;">
-          <a href="cswa_certificate.pdf" target="_blank" style="color:#60a5fa;"><i class="fas fa-download" style="margin-right:0.4rem;"></i>Télécharger le certificat (PDF)</a>
-        </p>
-      </div>
-
-    </div>
-  </div>
+  </section>
 
   <!-- ==================== CONTACT ==================== -->
   <section class="contact" id="contact">
@@ -3247,24 +2793,6 @@ END_TYPE</pre>
           const panel = document.getElementById(contentId);
           if (panel) panel.classList.add('active');
         }
-      });
-    });
-
-    // Onglets timeline (ex. Poitiers : Université / Stage)
-    document.querySelectorAll('.timeline-card-tabs .timeline-tab').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const card = btn.closest('.timeline-card-tabs');
-        if (!card) return;
-        const id = btn.dataset.timelineTab;
-        card.querySelectorAll('.timeline-tab').forEach(b => {
-          b.classList.remove('active');
-          b.setAttribute('aria-selected', 'false');
-        });
-        btn.classList.add('active');
-        btn.setAttribute('aria-selected', 'true');
-        card.querySelectorAll('.timeline-tab-panel').forEach(panel => {
-          panel.classList.toggle('active', panel.dataset.timelinePanel === id);
-        });
       });
     });
 
