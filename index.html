@@ -1249,6 +1249,12 @@
 
     /* Section 3D (model-viewer) */
     .section-3d { background: #0a0a0f; }
+    .model-3d-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+      gap: 1.5rem;
+      align-items: start;
+    }
     .model-3d-card {
       background: linear-gradient(135deg, rgba(59,130,246,0.08), rgba(2,6,23,0.85));
       border: 1px solid rgba(59,130,246,0.25);
@@ -3225,18 +3231,33 @@ END_TYPE</pre>
       <div class="section-line" data-aos="fade-up"></div>
       <h2 class="section-title" data-aos="fade-up" data-aos-delay="50"><span>3D</span></h2>
       <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Manipulation interactive de modèles</p>
-      <div class="model-3d-card" data-aos="fade-up" data-aos-delay="150">
-        <h3 class="model-3d-title">Téléphone mobile</h3>
-        <model-viewer
-          class="model-3d-viewer"
-          src="Mobile_Phone_2021.glb"
-          alt="Modèle 3D Téléphone mobile"
-          camera-controls
-          auto-rotate
-          shadow-intensity="1"
-          exposure="1">
-        </model-viewer>
-        <p class="model-3d-help">Clique et fais glisser pour tourner, utilise la molette pour zoomer.</p>
+      <div class="model-3d-grid">
+        <div class="model-3d-card" data-aos="fade-up" data-aos-delay="150">
+          <h3 class="model-3d-title">Téléphone mobile</h3>
+          <model-viewer
+            class="model-3d-viewer"
+            src="Mobile_Phone_2021.glb"
+            alt="Modèle 3D Téléphone mobile"
+            camera-controls
+            auto-rotate
+            shadow-intensity="1"
+            exposure="1">
+          </model-viewer>
+          <p class="model-3d-help">Clique et fais glisser pour tourner, utilise la molette pour zoomer.</p>
+        </div>
+        <div class="model-3d-card" data-aos="fade-up" data-aos-delay="200">
+          <h3 class="model-3d-title">Souris</h3>
+          <model-viewer
+            class="model-3d-viewer"
+            src="Mouse_Assembly_2021.glb"
+            alt="Modèle 3D Souris"
+            camera-controls
+            auto-rotate
+            shadow-intensity="1"
+            exposure="1">
+          </model-viewer>
+          <p class="model-3d-help">Clique et fais glisser pour tourner, utilise la molette pour zoomer.</p>
+        </div>
       </div>
     </div>
   </section>
