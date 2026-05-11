@@ -1261,9 +1261,6 @@
       gap: 1.5rem;
       align-items: start;
     }
-    .model-3d-card-fullwidth .model-3d-viewer {
-      height: 580px;
-    }
     .model-3d-card {
       background: linear-gradient(135deg, rgba(59,130,246,0.08), rgba(2,6,23,0.85));
       border: 1px solid rgba(59,130,246,0.25);
@@ -1349,7 +1346,6 @@
       #engine-canvas.loaded { opacity: 0.10; }
       .model-3d-viewer { height: 360px; }
       .model-3d-grid { grid-template-columns: 1fr; }
-      .model-3d-card-fullwidth .model-3d-viewer { height: 400px; }
     }
   </style>
 </head>
@@ -3271,18 +3267,33 @@ END_TYPE</pre>
             <p class="model-3d-help">Clique et fais glisser pour tourner, utilise la molette pour zoomer.</p>
           </div>
         </div>
-        <div class="model-3d-card model-3d-card-fullwidth" data-aos="fade-up" data-aos-delay="250">
-          <h3 class="model-3d-title">Manette</h3>
-          <model-viewer
-            class="model-3d-viewer"
-            src="Game_Controller_Assembly_2021.glb"
-            alt="Modèle 3D Manette"
-            camera-controls
-            auto-rotate
-            shadow-intensity="1"
-            exposure="1">
-          </model-viewer>
-          <p class="model-3d-help">Clique et fais glisser pour tourner, utilise la molette pour zoomer.</p>
+        <div class="model-3d-grid">
+          <div class="model-3d-card" data-aos="fade-up" data-aos-delay="250">
+            <h3 class="model-3d-title">Manette</h3>
+            <model-viewer
+              class="model-3d-viewer"
+              src="Game_Controller_Assembly_2021.glb"
+              alt="Modèle 3D Manette"
+              camera-controls
+              auto-rotate
+              shadow-intensity="1"
+              exposure="1">
+            </model-viewer>
+            <p class="model-3d-help">Clique et fais glisser pour tourner, utilise la molette pour zoomer.</p>
+          </div>
+          <div class="model-3d-card" data-aos="fade-up" data-aos-delay="300">
+            <h3 class="model-3d-title">Lego</h3>
+            <model-viewer
+              class="model-3d-viewer"
+              src="Lego_Figure_Assy_2021.glb"
+              alt="Modèle 3D Lego"
+              camera-controls
+              auto-rotate
+              shadow-intensity="1"
+              exposure="1">
+            </model-viewer>
+            <p class="model-3d-help">Clique et fais glisser pour tourner, utilise la molette pour zoomer.</p>
+          </div>
         </div>
       </div>
     </div>
