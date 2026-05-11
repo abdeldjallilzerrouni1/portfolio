@@ -1249,11 +1249,20 @@
 
     /* Section 3D (model-viewer) */
     .section-3d { background: #0a0a0f; }
+    .model-3d-section-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 1.75rem;
+      align-items: stretch;
+    }
     .model-3d-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 1.5rem;
       align-items: start;
+    }
+    .model-3d-card-fullwidth .model-3d-viewer {
+      height: 580px;
     }
     .model-3d-card {
       background: linear-gradient(135deg, rgba(59,130,246,0.08), rgba(2,6,23,0.85));
@@ -1339,6 +1348,8 @@
       .code-panel pre { font-size: 0.7rem; padding: 1rem; }
       #engine-canvas.loaded { opacity: 0.10; }
       .model-3d-viewer { height: 360px; }
+      .model-3d-grid { grid-template-columns: 1fr; }
+      .model-3d-card-fullwidth .model-3d-viewer { height: 400px; }
     }
   </style>
 </head>
@@ -3231,26 +3242,41 @@ END_TYPE</pre>
       <div class="section-line" data-aos="fade-up"></div>
       <h2 class="section-title" data-aos="fade-up" data-aos-delay="50"><span>3D</span></h2>
       <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Manipulation interactive de modèles</p>
-      <div class="model-3d-grid">
-        <div class="model-3d-card" data-aos="fade-up" data-aos-delay="150">
-          <h3 class="model-3d-title">Téléphone mobile</h3>
-          <model-viewer
-            class="model-3d-viewer"
-            src="Mobile_Phone_2021.glb"
-            alt="Modèle 3D Téléphone mobile"
-            camera-controls
-            auto-rotate
-            shadow-intensity="1"
-            exposure="1">
-          </model-viewer>
-          <p class="model-3d-help">Clique et fais glisser pour tourner, utilise la molette pour zoomer.</p>
+      <div class="model-3d-section-stack">
+        <div class="model-3d-grid">
+          <div class="model-3d-card" data-aos="fade-up" data-aos-delay="150">
+            <h3 class="model-3d-title">Téléphone mobile</h3>
+            <model-viewer
+              class="model-3d-viewer"
+              src="Mobile_Phone_2021.glb"
+              alt="Modèle 3D Téléphone mobile"
+              camera-controls
+              auto-rotate
+              shadow-intensity="1"
+              exposure="1">
+            </model-viewer>
+            <p class="model-3d-help">Clique et fais glisser pour tourner, utilise la molette pour zoomer.</p>
+          </div>
+          <div class="model-3d-card" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="model-3d-title">Souris</h3>
+            <model-viewer
+              class="model-3d-viewer"
+              src="Mouse_Assembly_2021.glb"
+              alt="Modèle 3D Souris"
+              camera-controls
+              auto-rotate
+              shadow-intensity="1"
+              exposure="1">
+            </model-viewer>
+            <p class="model-3d-help">Clique et fais glisser pour tourner, utilise la molette pour zoomer.</p>
+          </div>
         </div>
-        <div class="model-3d-card" data-aos="fade-up" data-aos-delay="200">
-          <h3 class="model-3d-title">Souris</h3>
+        <div class="model-3d-card model-3d-card-fullwidth" data-aos="fade-up" data-aos-delay="250">
+          <h3 class="model-3d-title">Manette</h3>
           <model-viewer
             class="model-3d-viewer"
-            src="Mouse_Assembly_2021.glb"
-            alt="Modèle 3D Souris"
+            src="Game_Controller_Assembly_2021.glb"
+            alt="Modèle 3D Manette"
             camera-controls
             auto-rotate
             shadow-intensity="1"
