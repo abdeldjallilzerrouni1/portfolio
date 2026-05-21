@@ -1286,6 +1286,20 @@
       font-size: 0.9rem;
       color: #94a3b8;
     }
+    .model-3d-featured {
+      width: 100%;
+    }
+    .model-3d-featured .model-3d-card {
+      padding: 1.5rem 1.75rem;
+    }
+    .model-3d-featured .model-3d-title {
+      font-size: 1.45rem;
+      margin-bottom: 1rem;
+    }
+    .model-3d-featured .model-3d-viewer {
+      height: min(72vh, 720px);
+      min-height: 560px;
+    }
 
     /* ============================================
        BACK TO TOP BUTTON
@@ -1345,6 +1359,10 @@
       .code-panel pre { font-size: 0.7rem; padding: 1rem; }
       #engine-canvas.loaded { opacity: 0.10; }
       .model-3d-viewer { height: 360px; }
+      .model-3d-featured .model-3d-viewer {
+        height: min(55vh, 480px);
+        min-height: 360px;
+      }
       .model-3d-grid { grid-template-columns: 1fr; }
     }
   </style>
@@ -3239,6 +3257,21 @@ END_TYPE</pre>
       <h2 class="section-title" data-aos="fade-up" data-aos-delay="50"><span>3D</span></h2>
       <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Manipulation interactive de modèles</p>
       <div class="model-3d-section-stack">
+        <div class="model-3d-featured" data-aos="fade-up" data-aos-delay="75">
+          <div class="model-3d-card">
+            <h3 class="model-3d-title">Génératrice synchrone</h3>
+            <model-viewer
+              class="model-3d-viewer"
+              src="ans_big_synchronous_generator.glb"
+              alt="Modèle 3D génératrice synchrone industrielle"
+              camera-controls
+              auto-rotate
+              shadow-intensity="1"
+              exposure="1">
+            </model-viewer>
+            <p class="model-3d-help">Clique et fais glisser pour tourner, utilise la molette pour zoomer.</p>
+          </div>
+        </div>
         <div class="model-3d-grid">
           <div class="model-3d-card" data-aos="fade-up" data-aos-delay="100">
             <h3 class="model-3d-title">Bras robotique 4 DDL</h3>
