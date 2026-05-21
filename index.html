@@ -1300,6 +1300,15 @@
       height: min(72vh, 720px);
       min-height: 560px;
     }
+    /* Génératrice : couleurs d’origine (gris métal), pas de rendu blanchi */
+    .model-3d-viewer--natural {
+      background: linear-gradient(165deg, #3d4450 0%, #2a2f36 55%, #1f2429 100%);
+      border-color: rgba(100, 116, 139, 0.45);
+    }
+    body.light-mode .model-3d-viewer--natural {
+      background: linear-gradient(165deg, #4b5563 0%, #374151 55%, #2d3238 100%);
+      border-color: rgba(75, 85, 99, 0.5);
+    }
 
     /* ============================================
        BACK TO TOP BUTTON
@@ -3261,13 +3270,15 @@ END_TYPE</pre>
           <div class="model-3d-card">
             <h3 class="model-3d-title">Génératrice synchrone</h3>
             <model-viewer
-              class="model-3d-viewer"
+              class="model-3d-viewer model-3d-viewer--natural"
               src="ans_big_synchronous_generator.glb"
               alt="Modèle 3D génératrice synchrone industrielle"
               camera-controls
               auto-rotate
-              shadow-intensity="1"
-              exposure="1">
+              environment-image="neutral"
+              tone-mapping="neutral"
+              shadow-intensity="0.5"
+              exposure="0.55">
             </model-viewer>
             <p class="model-3d-help">Clique et fais glisser pour tourner, utilise la molette pour zoomer.</p>
           </div>
