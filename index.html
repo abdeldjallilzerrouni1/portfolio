@@ -1302,12 +1302,14 @@
     }
     /* Génératrice : couleurs d’origine (gris métal), pas de rendu blanchi */
     .model-3d-viewer--natural {
-      background: linear-gradient(165deg, #2e333a 0%, #1e2228 55%, #14181c 100%);
+      background: linear-gradient(165deg, #252930 0%, #181c21 55%, #0f1215 100%);
       border-color: rgba(71, 85, 105, 0.5);
+      filter: brightness(0.9) contrast(1.04);
     }
     body.light-mode .model-3d-viewer--natural {
-      background: linear-gradient(165deg, #3d4450 0%, #2a2f36 55%, #1f2429 100%);
+      background: linear-gradient(165deg, #323843 0%, #23282f 55%, #181c21 100%);
       border-color: rgba(71, 85, 105, 0.55);
+      filter: brightness(0.88) contrast(1.04);
     }
 
     /* ============================================
@@ -3277,8 +3279,8 @@ END_TYPE</pre>
               auto-rotate
               environment-image="neutral"
               tone-mapping="neutral"
-              shadow-intensity="0.6"
-              exposure="0.42">
+              shadow-intensity="0.55"
+              exposure="0.32">
             </model-viewer>
             <p class="model-3d-help">Clique et fais glisser pour tourner, utilise la molette pour zoomer.</p>
           </div>
