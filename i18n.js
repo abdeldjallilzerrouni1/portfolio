@@ -40,7 +40,7 @@ window.PORTFOLIO_I18N = {
       poitiers: {
         school: 'Université de Poitiers',
         degree: 'Licence Génie Mécanique — L3',
-        date: '2025 — Présent'
+        date: '2025 — 2026'
       },
       kielce: {
         school: 'Kielce University of Technology',
@@ -210,7 +210,7 @@ window.PORTFOLIO_I18N = {
       poitiers: {
         school: 'University of Poitiers',
         degree: 'BSc Mechanical Engineering — Year 3',
-        date: '2025 — Present'
+        date: '2025 — 2026'
       },
       kielce: {
         school: 'Kielce University of Technology',
