@@ -14,9 +14,9 @@ window.PORTFOLIO_I18N = {
       aria3d: 'Aller à la section 3D'
     },
     hero: {
-      badge: "Ouvert aux opportunités d'alternance",
-      title: 'Étudiant en Génie Mécanique · L3 Université de Poitiers',
-      desc: "Passionné par l'ingénierie mécanique, je cherche une alternance à partir de septembre 2026 pour confronter mes acquis universitaires au monde industriel. Ce portfolio regroupe un aperçu de mes projets d'ingénierie réalisés au fil de mon parcours.",
+      badge: 'Stage · alternance · freelance',
+      title: 'Étudiant en modélisation et simulation mécanique · M1 — Université Sorbonne Paris Nord',
+      desc: "Passionné d'ingénierie mécanique, de la conception à la simulation, en passant par le calcul et les matériaux — ce portfolio rassemble les projets que j'ai réalisés au fil de mon parcours. Je reste ouvert à toute opportunité de stage, d'alternance ou de freelance.",
       btnProjects: 'Mes Projets',
       btn3d: '3D interactif',
       btnExperience: 'Mon expérience',
@@ -184,9 +184,9 @@ window.PORTFOLIO_I18N = {
       aria3d: 'Go to 3D section'
     },
     hero: {
-      badge: 'Open to apprenticeship opportunities',
-      title: 'Mechanical Engineering Student · L3 University of Poitiers',
-      desc: 'Passionate about mechanical engineering, I am looking for an apprenticeship from September 2026 to apply my university skills in industry. This portfolio showcases engineering projects from my academic journey.',
+      badge: 'Internship · apprenticeship · freelance',
+      title: 'Student in Mechanical Modeling & Simulation · M1 — Université Sorbonne Paris Nord',
+      desc: 'I am passionate about mechanical engineering—from design and simulation to analysis and materials science. This portfolio brings together the projects I have built along the way. I welcome internship, apprenticeship, and freelance opportunities.',
       btnProjects: 'My Projects',
       btn3d: 'Interactive 3D',
       btnExperience: 'My experience',
