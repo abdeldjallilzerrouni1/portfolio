@@ -26,7 +26,7 @@ window.PORTFOLIO_I18N = {
     profil: {
       title: 'À <span>Propos</span>',
       subtitle: 'Mon parcours et mes ambitions',
-      text: "Après une licence en génie mécanique à Poitiers et un parcours en anglais à Kielce (Pologne), je suis étudiant en Master à l’Université Sorbonne Paris Nord — modélisation et simulation mécanique (M1). Cette formation à l’USPN renforce mon profil d’ingénieur mécanicien avec un socle solide en calcul mécanique et en science des matériaux. Deux stages m’ont exposé au monde industriel : SAS Archeli (3D et mise en plan — bains nordiques) et SNRI (vannes, méthodes, plans cotés, simulation). Je suis ouvert aux offres de stage, d’alternance, de travail et de freelance."
+      text: "Mon parcours passe par la Pologne — deux années à Kielce, en anglais — puis par Poitiers, où j’ai validé ma licence en génie mécanique. Aujourd’hui, je suis en M1 à l’Université Sorbonne Paris Nord, en modélisation et simulation mécanique ; j’y consolide le calcul mécanique et la science des matériaux, en prolongement de ce que j’ai déjà acquis en bureau d’études et en CAO. J’ai aussi pu m’y confronter en entreprise : un stage chez SAS Archeli, sur la 3D et la mise en plan des bains nordiques, puis un autre chez SNRI, sur les vannes, les plans cotés et la simulation. Stage, alternance, emploi ou mission en freelance : je suis à l’écoute de toute proposition correspondant à mon profil."
     },
     formation: {
       title: '<span>Formation</span>',
@@ -196,7 +196,7 @@ window.PORTFOLIO_I18N = {
     profil: {
       title: 'About <span>Me</span>',
       subtitle: 'My background and goals',
-      text: 'After a BSc in mechanical engineering in Poitiers and two years of study in English in Kielce (Poland), I am now a master’s student at Université Sorbonne Paris Nord—mechanical modeling and simulation (Year 1). This program strengthens my profile as a mechanical engineer through solid foundations in mechanical analysis and materials science. Two internships exposed me to industry: SAS Archeli (3D modeling and drafting—Nordic baths) and SNRI (valves, methods, dimensioned drawings, simulation). I am open to internship, apprenticeship, employment, and freelance opportunities.'
+      text: 'My path took me to Poland first—two years in English at Kielce—then to Poitiers, where I earned my BSc in mechanical engineering. I am now in Year 1 at Université Sorbonne Paris Nord, studying mechanical modeling and simulation, building on my CAD and design-office experience with deeper work in mechanical analysis and materials science. I have also tested that in industry: an internship at SAS Archeli on 3D modeling and drawings for Nordic baths, then another at SNRI on valves, dimensioned drawings, and simulation. Internship, apprenticeship, permanent role, or freelance—I would be glad to hear about opportunities that fit my profile.'
     },
     formation: {
       title: '<span>Education</span>',
