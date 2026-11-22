@@ -41,27 +41,46 @@ window.PORTFOLIO_I18N = {
         school: 'Kielce University of Technology',
         degree: 'Licence Génie Mécanique — L1 / L2',
         date: '2023 — 2025'
-      }
+      },
+      locPoitiers: 'Poitiers, France',
+      locKielce: 'Kielce, Pologne',
+      coursework: {}
     },
     experience: {
       title: 'Expérience <span>professionnelle</span>',
-      subtitle: 'Stage en entreprise',
-      role: 'Stagiaire — Mise en plan technique & modélisation 3D paramétrique — Bains nordiques',
-      dates: 'Avril 2026 — Juin 2026',
-      items: [
-        'Modélisation 3D paramétrique des bains nordiques sous SOLIDWORKS.',
-        'Réalisation de relevés précis en atelier (pièces bois, assemblages, cuves, équipements).',
-        'Modélisation complète pièces et ensembles.',
-        'Création de plans d’ensemble et plans de détail cotés.',
-        'Réalisation de vues éclatées et coupes techniques.',
-        'Préparation de dossiers prêts pour la fabrication.',
-        'Création de fiches techniques produits.',
-        'Élaboration des nomenclatures (bois, quincaillerie, équipements, options).',
-        'Formalisation des procédures de fabrication.',
-        'Rédaction de plans d’installation pour les clients.',
-        'Observation des méthodes actuelles, identification des points d’optimisation, proposition d’améliorations applicables.',
-        'Participation à la structuration progressive de l’atelier.'
-      ]
+      subtitle: 'Stages en entreprise',
+      archeli: {
+        location: 'Tavaux, Bourgogne-Franche-Comté',
+        role: 'Stagiaire — Mise en plan technique & modélisation 3D paramétrique — Bains nordiques',
+        dates: 'Avril 2026 — Juin 2026',
+        items: [
+          'Modélisation 3D paramétrique des bains nordiques sous SOLIDWORKS.',
+          'Réalisation de relevés précis en atelier (pièces bois, assemblages, cuves, équipements).',
+          'Modélisation complète pièces et ensembles.',
+          'Création de plans d’ensemble et plans de détail cotés.',
+          'Réalisation de vues éclatées et coupes techniques.',
+          'Préparation de dossiers prêts pour la fabrication.',
+          'Création de fiches techniques produits.',
+          'Élaboration des nomenclatures (bois, quincaillerie, équipements, options).',
+          'Formalisation des procédures de fabrication.',
+          'Rédaction de plans d’installation pour les clients.',
+          'Observation des méthodes actuelles, identification des points d’optimisation, proposition d’améliorations applicables.',
+          'Participation à la structuration progressive de l’atelier.'
+        ]
+      },
+      snri: {
+        location: 'Ruffec, Charente',
+        role: 'Stagiaire — Bureau des méthodes (CAO / mise en plan)',
+        dates: 'Juillet 2026 — Août 2026',
+        items: [
+          'Modélisation 3D sous SolidWorks d’un corps de vanne industriel (états brut, semi-usiné et usiné).',
+          'Réalisation des mises en plan cotées pour la fabrication et le sous-traitant (coupes, vues de détail, tolérances, états de surface).',
+          'Intégration des modèles et des plans dans la base de données et la GED, et mise à jour de la nomenclature.',
+          'Amélioration d’une fiche d’auto-contrôle (Excel) pour le contrôle qualité d’une vanne.',
+          'Rétro-conception d’une pièce de machine cassée (arbre tourelle) : relevé de cotes, modélisation et mise en plan.',
+          'Amélioration de la pièce et vérification de sa résistance par simulation SolidWorks.'
+        ]
+      }
     },
     skills: {
       title: 'Compétences & <span>Expertise</span>',
@@ -91,12 +110,17 @@ window.PORTFOLIO_I18N = {
       subtitle: 'Les étapes clés de ma formation',
       tabUni: 'Université',
       tabStage: 'Stage',
-      tabAria: 'Poitiers : formation ou stage',
+      tabArcheli: 'Archeli',
+      tabSnri: 'SNRI',
+      tabAria: 'Poitiers : formation ou stages',
       kielceText: "Deux années d'études en anglais au sein de Kielce University of Technology en Pologne, où j'ai acquis des bases solides en génie mécanique. J'ai eu l'opportunité de travailler sur des machines CNC et de développer une compréhension approfondie des procédés de fabrication. Cette expérience internationale m'a permis de renforcer mon niveau d'anglais et de m'adapter à un environnement multiculturel.",
       poitiersText: "En intégrant l'Université de Poitiers en L3, j'ai eu la chance de travailler sur de nombreux projets de conception mécanique en travaux pratiques, ce qui a considérablement renforcé ma maîtrise de SolidWorks. J'ai également découvert l'automatisme avec B&R Automation Studio et acquis de bonnes bases en programmation ST. Ces projets concrets m'ont permis de développer une approche rigoureuse de l'ingénierie mécanique.",
       stageBanner: 'SAS Archeli — Bains nordiques',
       stageTitle: 'Stage — SAS Archeli',
-      stageText: 'Stagiaire : mise en plan technique et modélisation 3D paramétrique (SOLIDWORKS), relevés atelier, plans, nomenclatures et dossiers fabrication. <a class="inline-link" href="#experience">Voir le détail de la mission ↓</a>'
+      stageText: 'Stagiaire : mise en plan technique et modélisation 3D paramétrique (SOLIDWORKS), relevés atelier, plans, nomenclatures et dossiers fabrication. <a class="inline-link" href="#experience-archeli">Voir le détail de la mission ↓</a>',
+      snriBanner: 'SNRI — High Performance Valves',
+      snriTitle: 'Stage — SNRI',
+      snriText: 'Stagiaire au bureau des méthodes : modélisation de vannes industrielles, mises en plan, GED et simulation SolidWorks. <a class="inline-link" href="#experience-snri">Voir le détail de la mission ↓</a>'
     },
     projets: {
       title: 'Galerie de <span>Projets</span>',
@@ -181,27 +205,116 @@ window.PORTFOLIO_I18N = {
         school: 'Kielce University of Technology',
         degree: 'BSc Mechanical Engineering — Years 1 & 2',
         date: '2023 — 2025'
+      },
+      locPoitiers: 'Poitiers, France',
+      locKielce: 'Kielce, Poland',
+      coursework: {
+        poitiersS5: [
+          'Mathematics & Computer Engineering',
+          'Mechanics & Design Methodology',
+          'Control, Automation & Mechanical Design',
+          'Continuum Solid Mechanics',
+          'UE5 English & Professional Skills (S5)'
+        ],
+        poitiersS6: [
+          'Mathematics & Numerical Methods',
+          'Modeling, Mechanisms & Mechanical Engineering',
+          'Fluid Mechanics & Technology',
+          'Industrialization Techniques',
+          'UE5 English & Professional Skills (S6)'
+        ],
+        kielceS1: [
+          'Calculus',
+          'Electrical Engineering',
+          'Ergonomics & Occupational Health and Safety',
+          'Fundamentals of Standardization & Innovation',
+          'HES1',
+          'Information Technologies',
+          'Linear Algebra',
+          'Technical Chemistry',
+          'Technical Drawing',
+          'Technical Physics',
+          'Theory of Machines'
+        ],
+        kielceS2: [
+          'Automotive Engineering',
+          "Engineer's Mechanics I",
+          'Technical Drawing',
+          'Foreign Language (Polish)',
+          'Fundamentals of Molding / Casting',
+          'Fundamentals of Electronics',
+          'Fundamentals of Metal Forming',
+          'Fundamentals of Rapid Prototyping',
+          'Fundamentals of Welding',
+          'Mathematics',
+          'Materials Science I',
+          'Microtechnology & Nanotechnology',
+          'Plastics & Composites'
+        ],
+        kielceS3: [
+          'Computer-Aided Technical Drawing',
+          "Engineer's Mechanics II",
+          'Foreign Language (Polish)',
+          'Fundamentals of Molding / Casting (Lab)',
+          'Fundamentals of Computer Science',
+          'Fundamentals of Metal Forming (Lab)',
+          'Fundamentals of Welding (Lab)',
+          'Intellectual Property Protection',
+          'Laser Technology',
+          'Materials Science II',
+          'Metrology I',
+          'Strength of Materials',
+          'Physical Education'
+        ],
+        kielceS4: [
+          'Fluid Mechanics',
+          'Foreign Language (Polish)',
+          'Fundamentals of CNC Programming',
+          'Fundamentals of Machine Setup',
+          'Fundamentals of Machine Design',
+          'Fundamentals of Machining',
+          'Manufacturing Engineering',
+          'Metrology II',
+          'Theory of Machinery & Mechanisms',
+          'Physical Education'
+        ]
       }
     },
     experience: {
       title: 'Professional <span>Experience</span>',
-      subtitle: 'Internship',
-      role: 'Intern — Technical drafting & parametric 3D modeling — Nordic baths',
-      dates: 'April 2026 — June 2026',
-      items: [
-        'Parametric 3D modeling of Nordic baths in SOLIDWORKS.',
-        'Accurate shop-floor measurements (wood parts, assemblies, tubs, equipment).',
-        'Full modeling of parts and assemblies.',
-        'General and detailed dimensioned drawings.',
-        'Exploded views and technical sections.',
-        'Manufacturing-ready documentation packages.',
-        'Product specification sheets.',
-        'BOMs (wood, hardware, equipment, options).',
-        'Manufacturing procedure documentation.',
-        'Customer installation plans.',
-        'Review of current methods, optimization opportunities, and actionable improvements.',
-        'Supporting gradual workshop organization.'
-      ]
+      subtitle: 'Internships',
+      archeli: {
+        location: 'Tavaux, Bourgogne-Franche-Comté',
+        role: 'Intern — Technical drafting & parametric 3D modeling — Nordic baths',
+        dates: 'April 2026 — June 2026',
+        items: [
+          'Parametric 3D modeling of Nordic baths in SOLIDWORKS.',
+          'Accurate shop-floor measurements (wood parts, assemblies, tubs, equipment).',
+          'Full modeling of parts and assemblies.',
+          'General and detailed dimensioned drawings.',
+          'Exploded views and technical sections.',
+          'Manufacturing-ready documentation packages.',
+          'Product specification sheets.',
+          'BOMs (wood, hardware, equipment, options).',
+          'Manufacturing procedure documentation.',
+          'Customer installation plans.',
+          'Review of current methods, optimization opportunities, and actionable improvements.',
+          'Supporting gradual workshop organization.'
+        ]
+      },
+      snri: {
+        location: 'Ruffec, Charente',
+        role: 'Intern — Methods office (CAD / technical drafting)',
+        dates: 'July 2026 — August 2026',
+        items: [
+          'SolidWorks 3D modeling of an industrial valve body (raw, semi-finished, and machined states).',
+          'Dimensioned drawings for manufacturing and subcontractors (sections, detail views, tolerances, surface finishes).',
+          'Integration of models and drawings into the database and EDMS, and BOM updates.',
+          'Improvement of an Excel self-inspection sheet for valve quality control.',
+          'Reverse engineering of a broken machine part (turret shaft): measurement, modeling, and drafting.',
+          'Part improvement and strength verification using SolidWorks simulation.'
+        ]
+      }
     },
     skills: {
       title: 'Skills & <span>Expertise</span>',
@@ -231,12 +344,17 @@ window.PORTFOLIO_I18N = {
       subtitle: 'Key milestones in my education',
       tabUni: 'University',
       tabStage: 'Internship',
-      tabAria: 'Poitiers: university or internship',
+      tabArcheli: 'Archeli',
+      tabSnri: 'SNRI',
+      tabAria: 'Poitiers: university or internships',
       kielceText: 'Two years of study in English at Kielce University of Technology, Poland, where I built strong mechanical engineering fundamentals. I worked on CNC machines and gained a solid understanding of manufacturing processes. This international experience improved my English and multicultural adaptability.',
       poitiersText: 'Since joining the University of Poitiers (Year 3), I have completed many hands-on mechanical design projects, significantly strengthening my SolidWorks skills. I discovered automation with B&R Automation Studio and gained a good foundation in ST programming. These projects shaped a rigorous approach to mechanical engineering.',
       stageBanner: 'SAS Archeli — Nordic baths',
       stageTitle: 'Internship — SAS Archeli',
-      stageText: 'Intern: technical drafting and parametric 3D modeling (SOLIDWORKS), shop surveys, drawings, BOMs, and manufacturing files. <a class="inline-link" href="#experience">View mission details ↓</a>'
+      stageText: 'Intern: technical drafting and parametric 3D modeling (SOLIDWORKS), shop surveys, drawings, BOMs, and manufacturing files. <a class="inline-link" href="#experience-archeli">View mission details ↓</a>',
+      snriBanner: 'SNRI — High Performance Valves',
+      snriTitle: 'Internship — SNRI',
+      snriText: 'Methods-office intern: industrial valve CAD, technical drawings, EDMS, and SolidWorks simulation. <a class="inline-link" href="#experience-snri">View mission details ↓</a>'
     },
     projets: {
       title: 'Project <span>Gallery</span>',
@@ -327,10 +445,11 @@ function setPortfolioLanguage(lang) {
   const langSwitch = document.getElementById('langSwitch');
   if (langSwitch) langSwitch.setAttribute('aria-label', t('aria.lang'));
 
-  document.querySelectorAll('.experience-list li[data-i18n-index]').forEach((li) => {
+  document.querySelectorAll('.experience-list li[data-i18n-exp]').forEach((li) => {
+    const exp = li.getAttribute('data-i18n-exp');
     const i = parseInt(li.getAttribute('data-i18n-index'), 10);
-    const items = PORTFOLIO_I18N[lang].experience.items;
-    if (items[i] != null) li.textContent = items[i];
+    const items = PORTFOLIO_I18N[lang].experience[exp]?.items;
+    if (items && items[i] != null) li.textContent = items[i];
   });
 
   document.querySelectorAll('.model-3d-help').forEach((el) => {
@@ -343,8 +462,40 @@ function setPortfolioLanguage(lang) {
     if (val) el.textContent = val;
   });
 
+  applyCourseworkTags(lang);
   swapModalLanguage(lang);
   document.body.classList.toggle('lang-en', lang === 'en');
+}
+
+/** Mémorise les libellés FR des matières, puis applique EN depuis PORTFOLIO_I18N. */
+function initCourseworkI18n() {
+  document.querySelectorAll('[data-i18n-coursework]').forEach((container) => {
+    if (container.dataset.frCoursework) return;
+    const tags = [...container.querySelectorAll('.coursework-tag')].map((s) => s.textContent.trim());
+    container.dataset.frCoursework = JSON.stringify(tags);
+  });
+}
+
+function applyCourseworkTags(lang) {
+  document.querySelectorAll('[data-i18n-coursework]').forEach((container) => {
+    const key = container.getAttribute('data-i18n-coursework');
+    const spans = container.querySelectorAll('.coursework-tag');
+    let list;
+    if (lang === 'en') {
+      list = i18nGet('en', 'formation.coursework.' + key);
+    }
+    if (!Array.isArray(list) && container.dataset.frCoursework) {
+      try {
+        list = JSON.parse(container.dataset.frCoursework);
+      } catch (_) {
+        list = null;
+      }
+    }
+    if (!Array.isArray(list)) return;
+    spans.forEach((span, i) => {
+      if (list[i] != null) span.textContent = list[i];
+    });
+  });
 }
 
 /** Enveloppe le contenu traduisible de chaque modale projet (sans le bouton fermer). */
@@ -377,11 +528,23 @@ function swapModalLanguage(lang) {
   });
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+function bootPortfolioI18n() {
   initModalI18n();
+  initCourseworkI18n();
   const saved = localStorage.getItem('portfolio-lang') || 'fr';
   setPortfolioLanguage(saved);
   document.querySelectorAll('.lang-btn').forEach((btn) => {
+    if (btn.dataset.i18nBound === '1') return;
+    btn.dataset.i18nBound = '1';
     btn.addEventListener('click', () => setPortfolioLanguage(btn.dataset.lang));
   });
-});
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', bootPortfolioI18n);
+} else {
+  bootPortfolioI18n();
+}
+
+window.setPortfolioLanguage = setPortfolioLanguage;
+window.swapModalLanguage = swapModalLanguage;
