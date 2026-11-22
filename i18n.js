@@ -26,7 +26,7 @@ window.PORTFOLIO_I18N = {
     profil: {
       title: 'À <span>Propos</span>',
       subtitle: 'Mon parcours et mes ambitions',
-      text: "Après une licence en génie mécanique à Poitiers et un parcours en anglais à Kielce (Pologne), je me concentre sur la conception et la simulation (SolidWorks, bureau d’études, automatisme). Deux stages m’ont exposé au monde industriel : SAS Archeli (3D et mise en plan — bains nordiques) et SNRI (vannes, méthodes, plans cotés, simulation). En 2026, j’intègre le Master à l’Université Sorbonne Paris Nord (modélisation et simulation mécanique) : cette formation à l’USPN renforcera mon profil d’ingénieur mécanicien grâce à un socle solide en calcul mécanique et en science des matériaux. Je reste ouvert à une alternance à partir de septembre 2026."
+      text: "Après une licence en génie mécanique à Poitiers et un parcours en anglais à Kielce (Pologne), je suis étudiant en Master à l’Université Sorbonne Paris Nord — modélisation et simulation mécanique (M1). Cette formation à l’USPN renforce mon profil d’ingénieur mécanicien avec un socle solide en calcul mécanique et en science des matériaux. Deux stages m’ont exposé au monde industriel : SAS Archeli (3D et mise en plan — bains nordiques) et SNRI (vannes, méthodes, plans cotés, simulation). Je suis ouvert aux offres de stage, d’alternance, de travail et de freelance."
     },
     formation: {
       title: '<span>Formation</span>',
@@ -196,7 +196,7 @@ window.PORTFOLIO_I18N = {
     profil: {
       title: 'About <span>Me</span>',
       subtitle: 'My background and goals',
-      text: 'After a BSc in mechanical engineering in Poitiers and two years of study in English in Kielce (Poland), I focus on design and simulation (SolidWorks, design office, automation). Two internships exposed me to industry: SAS Archeli (3D modeling and drafting—Nordic baths) and SNRI (valves, methods, dimensioned drawings, simulation). In 2026 I join the master’s at Université Sorbonne Paris Nord (mechanical modeling and simulation); this program will make me a more complete mechanical engineer with strong foundations in mechanical analysis and materials science. I am open to an apprenticeship from September 2026.'
+      text: 'After a BSc in mechanical engineering in Poitiers and two years of study in English in Kielce (Poland), I am now a master’s student at Université Sorbonne Paris Nord—mechanical modeling and simulation (Year 1). This program strengthens my profile as a mechanical engineer through solid foundations in mechanical analysis and materials science. Two internships exposed me to industry: SAS Archeli (3D modeling and drafting—Nordic baths) and SNRI (valves, methods, dimensioned drawings, simulation). I am open to internship, apprenticeship, employment, and freelance opportunities.'
     },
     formation: {
       title: '<span>Education</span>',
