@@ -32,6 +32,11 @@ window.PORTFOLIO_I18N = {
       title: '<span>Formation</span>',
       subtitle: 'Mon cursus académique',
       present: 'Présent',
+      sorbonne: {
+        school: 'Université Sorbonne Paris Nord',
+        degree: 'Master Science et Génie des Matériaux — Modélisation et simulation mécanique (M1)',
+        date: '2026 — Présent'
+      },
       poitiers: {
         school: 'Université de Poitiers',
         degree: 'Licence Génie Mécanique — L3',
@@ -42,6 +47,7 @@ window.PORTFOLIO_I18N = {
         degree: 'Licence Génie Mécanique — L1 / L2',
         date: '2023 — 2025'
       },
+      locSorbonne: 'Villetaneuse, France',
       locPoitiers: 'Poitiers, France',
       locKielce: 'Kielce, Pologne',
       coursework: {}
@@ -196,6 +202,11 @@ window.PORTFOLIO_I18N = {
       title: '<span>Education</span>',
       subtitle: 'My academic path',
       present: 'Present',
+      sorbonne: {
+        school: 'Université Sorbonne Paris Nord',
+        degree: "Master's (M1) — Materials Science & Engineering: Mechanical Modeling & Simulation",
+        date: '2026 — Present'
+      },
       poitiers: {
         school: 'University of Poitiers',
         degree: 'BSc Mechanical Engineering — Year 3',
@@ -206,6 +217,7 @@ window.PORTFOLIO_I18N = {
         degree: 'BSc Mechanical Engineering — Years 1 & 2',
         date: '2023 — 2025'
       },
+      locSorbonne: 'Villetaneuse, France',
       locPoitiers: 'Poitiers, France',
       locKielce: 'Kielce, Poland',
       coursework: {
