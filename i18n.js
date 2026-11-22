@@ -1,0 +1,355 @@
+/* Portfolio FR/EN — apply with data-i18n / data-i18n-html */
+window.PORTFOLIO_I18N = {
+  fr: {
+    meta: { title: 'Portfolio | Abdeldjallil Seif E. Zerrouni' },
+    nav: {
+      profil: 'Profil',
+      formation: 'Formation',
+      experience: 'Expérience',
+      competences: 'Compétences',
+      certifications: 'Certifications',
+      parcours: 'Parcours',
+      projets: 'Projets',
+      contact: 'Contact',
+      aria3d: 'Aller à la section 3D'
+    },
+    hero: {
+      badge: "Ouvert aux opportunités d'alternance",
+      title: 'Étudiant en Génie Mécanique · L3 Université de Poitiers',
+      desc: "Passionné par l'ingénierie mécanique, je cherche une alternance à partir de septembre 2026 pour confronter mes acquis universitaires au monde industriel. Ce portfolio regroupe un aperçu de mes projets d'ingénierie réalisés au fil de mon parcours.",
+      btnProjects: 'Mes Projets',
+      btn3d: '3D interactif',
+      btnExperience: 'Mon expérience',
+      btnContact: 'Me Contacter',
+      altPhoto: 'Photo de profil'
+    },
+    profil: {
+      title: 'À <span>Propos</span>',
+      subtitle: 'Mon parcours et mes ambitions',
+      text: "Étudiant en troisième année de Licence Génie Mécanique à l'Université de Poitiers, je bénéficie d'un parcours international ayant débuté en Pologne, à Kielce University of Technology, où j'ai suivi deux années de formation en anglais. Cette expérience m'a permis d'acquérir une aisance en anglais, aussi bien à l'oral qu'à l'écrit, notamment en anglais technique, et de m'adapter pleinement à un environnement bilingue. J'y ai également acquis des bases solides en SolidWorks ainsi qu'une première expérience en programmation CNC. À Poitiers, ma maîtrise de SolidWorks s'est approfondie au fil de nombreux projets de bureau d'études, allant de la conception de pièces mécanosoudées aux simulations de résistance des matériaux. J'ai également développé une solide compétence en automatisme — analyse de cahier des charges, rédaction de GRAFCET — avec la programmation en Structured Text sur B&R Automation Studio. Désireux de confronter mes acquis au monde professionnel, je suis activement à la recherche d'une alternance en ingénierie mécanique à partir de septembre 2026."
+    },
+    formation: {
+      title: '<span>Formation</span>',
+      subtitle: 'Mon cursus académique',
+      present: 'Présent',
+      poitiers: {
+        school: 'Université de Poitiers',
+        degree: 'Licence Génie Mécanique — L3',
+        date: '2025 — Présent'
+      },
+      kielce: {
+        school: 'Kielce University of Technology',
+        degree: 'Licence Génie Mécanique — L1 / L2',
+        date: '2023 — 2025'
+      }
+    },
+    experience: {
+      title: 'Expérience <span>professionnelle</span>',
+      subtitle: 'Stage en entreprise',
+      role: 'Stagiaire — Mise en plan technique & modélisation 3D paramétrique — Bains nordiques',
+      dates: 'Avril 2026 — Juin 2026',
+      items: [
+        'Modélisation 3D paramétrique des bains nordiques sous SOLIDWORKS.',
+        'Réalisation de relevés précis en atelier (pièces bois, assemblages, cuves, équipements).',
+        'Modélisation complète pièces et ensembles.',
+        'Création de plans d’ensemble et plans de détail cotés.',
+        'Réalisation de vues éclatées et coupes techniques.',
+        'Préparation de dossiers prêts pour la fabrication.',
+        'Création de fiches techniques produits.',
+        'Élaboration des nomenclatures (bois, quincaillerie, équipements, options).',
+        'Formalisation des procédures de fabrication.',
+        'Rédaction de plans d’installation pour les clients.',
+        'Observation des méthodes actuelles, identification des points d’optimisation, proposition d’améliorations applicables.',
+        'Participation à la structuration progressive de l’atelier.'
+      ]
+    },
+    skills: {
+      title: 'Compétences & <span>Expertise</span>',
+      subtitle: 'Mes outils et savoir-faire',
+      all: 'Toutes',
+      meca: 'Génie Mécanique',
+      auto: 'Automatisme',
+      additional: 'Complémentaires',
+      advanced: 'Avancé',
+      intermediate: 'Intermédiaire'
+    },
+    langues: {
+      title: '<span>Langues</span>',
+      subtitle: 'Mes compétences linguistiques',
+      english: 'Anglais',
+      french: 'Français',
+      arabic: 'Arabe',
+      native: 'Langue maternelle'
+    },
+    cert: {
+      title: 'Mes <span>Certifications</span>',
+      subtitle: 'Certifications professionnelles obtenues',
+      date: 'Février 2026'
+    },
+    parcours: {
+      title: 'Mon <span>Parcours</span>',
+      subtitle: 'Les étapes clés de ma formation',
+      tabUni: 'Université',
+      tabStage: 'Stage',
+      tabAria: 'Poitiers : formation ou stage',
+      kielceText: "Deux années d'études en anglais au sein de Kielce University of Technology en Pologne, où j'ai acquis des bases solides en génie mécanique. J'ai eu l'opportunité de travailler sur des machines CNC et de développer une compréhension approfondie des procédés de fabrication. Cette expérience internationale m'a permis de renforcer mon niveau d'anglais et de m'adapter à un environnement multiculturel.",
+      poitiersText: "En intégrant l'Université de Poitiers en L3, j'ai eu la chance de travailler sur de nombreux projets de conception mécanique en travaux pratiques, ce qui a considérablement renforcé ma maîtrise de SolidWorks. J'ai également découvert l'automatisme avec B&R Automation Studio et acquis de bonnes bases en programmation ST. Ces projets concrets m'ont permis de développer une approche rigoureuse de l'ingénierie mécanique.",
+      stageBanner: 'SAS Archeli — Bains nordiques',
+      stageTitle: 'Stage — SAS Archeli',
+      stageText: 'Stagiaire : mise en plan technique et modélisation 3D paramétrique (SOLIDWORKS), relevés atelier, plans, nomenclatures et dossiers fabrication. <a class="inline-link" href="#experience">Voir le détail de la mission ↓</a>'
+    },
+    projets: {
+      title: 'Galerie de <span>Projets</span>',
+      subtitle: "Mes réalisations en bureau d'études",
+      all: 'Tous les projets',
+      meca: 'Génie Mécanique',
+      auto: 'Automatisme',
+      ridoir: { title: 'Ridoir hydraulique — Re-conception mécano-soudée', desc: "Re-conception et optimisation d'un ridoir mécano-soudé : simplification, simulation éléments finis et allègement de 32%." },
+      multi: { title: 'Multiplicateur de pression hydraulique', desc: 'Conception et optimisation de pièces de fonderie aluminium pour vérin hydraulique : tête de vérin et embase, validées par simulation FEA.' },
+      usinage: { title: "Montage d'usinage — Perçage de pièces cylindriques", desc: "Conception d'un montage d'usinage isostatique pour le perçage de pièces cylindriques sur perceuse à colonne." },
+      cnc: { title: 'Programmation CNC — Heidenhain iTNC 530', desc: "Développement d'un programme d'usinage complet pour une pièce 150×100 mm : contournage, poches, rainures et perçage." },
+      renvoi: { title: 'Renvoi conique aéronautique — Conception et modélisation CAO', desc: "Conception d'un renvoi conique aéronautique : dimensionnement des roulements, modélisation des engrenages et étude comparative de deux architectures de carter." },
+      poteyage: { title: 'Machine de poteyage sur portique cartésien', desc: "Programmation du cycle automatisé d'une machine de poteyage pour le dépôt de carbone sur demi-moules en verre, avec balayage en zigzag via portique cartésien." },
+      tagConception: 'Conception',
+      tagFonderie: 'Fonderie',
+      tagIsostatism: 'Isostatisme'
+    },
+    models3d: {
+      subtitle: "Modèles 3D interactifs de pièces que j'ai créées en CAO pour en comprendre le fonctionnement mécanique",
+      help: 'Clique et fais glisser pour tourner, utilise la molette pour zoomer.',
+      arm: 'Bras robotique 4 DDL',
+      alternator: 'Alternateur',
+      generator: 'Génératrice synchrone',
+      pump: 'Pompe centrifuge',
+      bender: 'Cintreuse hydraulique de tubes',
+      phone: 'Téléphone mobile',
+      mouse: 'Souris',
+      gamepad: 'Manette',
+      lego: 'Lego'
+    },
+    contact: {
+      title: 'Me <span>Contacter</span>',
+      subtitle: "N'hésitez pas à me joindre",
+      phone: 'Téléphone'
+    },
+    footer: '© 2026 — Abdeldjallil Seif E. Zerrouni · Portfolio Génie Mécanique',
+    aria: {
+      theme: 'Changer le thème',
+      menu: 'Menu',
+      backTop: 'Retour en haut',
+      lang: 'Choisir la langue'
+    }
+  },
+  en: {
+    meta: { title: 'Portfolio | Abdeldjallil Seif E. Zerrouni' },
+    nav: {
+      profil: 'Profile',
+      formation: 'Education',
+      experience: 'Experience',
+      competences: 'Skills',
+      certifications: 'Certifications',
+      parcours: 'Journey',
+      projets: 'Projects',
+      contact: 'Contact',
+      aria3d: 'Go to 3D section'
+    },
+    hero: {
+      badge: 'Open to apprenticeship opportunities',
+      title: 'Mechanical Engineering Student · L3 University of Poitiers',
+      desc: 'Passionate about mechanical engineering, I am looking for an apprenticeship from September 2026 to apply my university skills in industry. This portfolio showcases engineering projects from my academic journey.',
+      btnProjects: 'My Projects',
+      btn3d: 'Interactive 3D',
+      btnExperience: 'My experience',
+      btnContact: 'Contact Me',
+      altPhoto: 'Profile photo'
+    },
+    profil: {
+      title: 'About <span>Me</span>',
+      subtitle: 'My background and goals',
+      text: 'I am a third-year Mechanical Engineering student at the University of Poitiers. My path began in Poland at Kielce University of Technology, with two years of study in English. That experience strengthened my technical English and adaptability in a bilingual environment. I built solid SolidWorks skills and a first introduction to CNC programming. In Poitiers, I deepened CAD through design-office projects—from welded mechanical parts to FEA simulations. I also developed automation skills (requirements analysis, GRAFCET) and Structured Text on B&R Automation Studio. I am actively seeking a mechanical engineering apprenticeship from September 2026.'
+    },
+    formation: {
+      title: '<span>Education</span>',
+      subtitle: 'My academic path',
+      present: 'Present',
+      poitiers: {
+        school: 'University of Poitiers',
+        degree: 'BSc Mechanical Engineering — Year 3',
+        date: '2025 — Present'
+      },
+      kielce: {
+        school: 'Kielce University of Technology',
+        degree: 'BSc Mechanical Engineering — Years 1 & 2',
+        date: '2023 — 2025'
+      }
+    },
+    experience: {
+      title: 'Professional <span>Experience</span>',
+      subtitle: 'Internship',
+      role: 'Intern — Technical drafting & parametric 3D modeling — Nordic baths',
+      dates: 'April 2026 — June 2026',
+      items: [
+        'Parametric 3D modeling of Nordic baths in SOLIDWORKS.',
+        'Accurate shop-floor measurements (wood parts, assemblies, tubs, equipment).',
+        'Full modeling of parts and assemblies.',
+        'General and detailed dimensioned drawings.',
+        'Exploded views and technical sections.',
+        'Manufacturing-ready documentation packages.',
+        'Product specification sheets.',
+        'BOMs (wood, hardware, equipment, options).',
+        'Manufacturing procedure documentation.',
+        'Customer installation plans.',
+        'Review of current methods, optimization opportunities, and actionable improvements.',
+        'Supporting gradual workshop organization.'
+      ]
+    },
+    skills: {
+      title: 'Skills & <span>Expertise</span>',
+      subtitle: 'My tools and know-how',
+      all: 'All',
+      meca: 'Mechanical Engineering',
+      auto: 'Automation',
+      additional: 'Additional',
+      advanced: 'Advanced',
+      intermediate: 'Intermediate'
+    },
+    langues: {
+      title: '<span>Languages</span>',
+      subtitle: 'My language skills',
+      english: 'English',
+      french: 'French',
+      arabic: 'Arabic',
+      native: 'Native language'
+    },
+    cert: {
+      title: 'My <span>Certifications</span>',
+      subtitle: 'Professional certifications obtained',
+      date: 'February 2026'
+    },
+    parcours: {
+      title: 'My <span>Journey</span>',
+      subtitle: 'Key milestones in my education',
+      tabUni: 'University',
+      tabStage: 'Internship',
+      tabAria: 'Poitiers: university or internship',
+      kielceText: 'Two years of study in English at Kielce University of Technology, Poland, where I built strong mechanical engineering fundamentals. I worked on CNC machines and gained a solid understanding of manufacturing processes. This international experience improved my English and multicultural adaptability.',
+      poitiersText: 'Since joining the University of Poitiers (Year 3), I have completed many hands-on mechanical design projects, significantly strengthening my SolidWorks skills. I discovered automation with B&R Automation Studio and gained a good foundation in ST programming. These projects shaped a rigorous approach to mechanical engineering.',
+      stageBanner: 'SAS Archeli — Nordic baths',
+      stageTitle: 'Internship — SAS Archeli',
+      stageText: 'Intern: technical drafting and parametric 3D modeling (SOLIDWORKS), shop surveys, drawings, BOMs, and manufacturing files. <a class="inline-link" href="#experience">View mission details ↓</a>'
+    },
+    projets: {
+      title: 'Project <span>Gallery</span>',
+      subtitle: 'Design-office achievements',
+      all: 'All projects',
+      meca: 'Mechanical Engineering',
+      auto: 'Automation',
+      ridoir: { title: 'Hydraulic crowder — Redesigned welded assembly', desc: 'Redesign and optimization of a welded crowder: simplification, FEA simulation, and 32% weight reduction.' },
+      multi: { title: 'Hydraulic pressure multiplier', desc: 'Design and optimization of aluminum cast parts for a hydraulic cylinder: head and base, validated by FEA.' },
+      usinage: { title: 'Machining fixture — Drilling cylindrical parts', desc: 'Isostatic machining fixture for drilling cylindrical parts on a column drill.' },
+      cnc: { title: 'CNC programming — Heidenhain iTNC 530', desc: 'Complete machining program for a 150×100 mm part: profiling, pockets, slots, and drilling.' },
+      renvoi: { title: 'Aerospace bevel gearbox — CAD design', desc: 'Bevel gearbox design: bearing sizing, gear modeling, and comparison of two housing architectures.' },
+      poteyage: { title: 'Carbon coating machine on Cartesian gantry', desc: 'Automated coating cycle for depositing carbon on glass half-molds, with zigzag scanning on a Cartesian gantry.' },
+      tagConception: 'Design',
+      tagFonderie: 'Casting',
+      tagIsostatism: 'Isostaticity'
+    },
+    models3d: {
+      subtitle: 'Interactive 3D models of parts I created in CAD to understand their mechanical function',
+      help: 'Click and drag to rotate, use the scroll wheel to zoom.',
+      arm: '4-DOF robotic arm',
+      alternator: 'Alternator',
+      generator: 'Synchronous generator',
+      pump: 'Centrifugal pump',
+      bender: 'Hydraulic tube bender',
+      phone: 'Mobile phone',
+      mouse: 'Computer mouse',
+      gamepad: 'Game controller',
+      lego: 'Lego figure'
+    },
+    contact: {
+      title: 'Contact <span>Me</span>',
+      subtitle: 'Feel free to reach out',
+      phone: 'Phone'
+    },
+    footer: '© 2026 — Abdeldjallil Seif E. Zerrouni · Mechanical Engineering Portfolio',
+    aria: {
+      theme: 'Toggle theme',
+      menu: 'Menu',
+      backTop: 'Back to top',
+      lang: 'Choose language'
+    }
+  }
+};
+
+function i18nGet(lang, key) {
+  return key.split('.').reduce((o, k) => (o && o[k] !== undefined ? o[k] : null), PORTFOLIO_I18N[lang]);
+}
+
+function setPortfolioLanguage(lang) {
+  if (!PORTFOLIO_I18N[lang]) lang = 'fr';
+  document.documentElement.lang = lang;
+  localStorage.setItem('portfolio-lang', lang);
+
+  document.querySelectorAll('.lang-btn').forEach((btn) => {
+    btn.classList.toggle('active', btn.dataset.lang === lang);
+    btn.setAttribute('aria-pressed', btn.dataset.lang === lang ? 'true' : 'false');
+  });
+
+  const t = (key) => i18nGet(lang, key);
+
+  document.title = t('meta.title');
+  document.querySelectorAll('[data-i18n]').forEach((el) => {
+    const key = el.getAttribute('data-i18n');
+    const val = t(key);
+    if (val != null) el.textContent = val;
+  });
+  document.querySelectorAll('[data-i18n-html]').forEach((el) => {
+    const key = el.getAttribute('data-i18n-html');
+    const val = t(key);
+    if (val != null) el.innerHTML = val;
+  });
+  document.querySelectorAll('[data-i18n-aria]').forEach((el) => {
+    const key = el.getAttribute('data-i18n-aria');
+    const val = t(key);
+    if (val != null) el.setAttribute('aria-label', val);
+  });
+  document.querySelectorAll('[data-i18n-alt]').forEach((el) => {
+    const key = el.getAttribute('data-i18n-alt');
+    const val = t(key);
+    if (val != null) el.setAttribute('alt', val);
+  });
+  const nav3d = document.getElementById('nav3dLink');
+  const hero3d = document.getElementById('hero3dBtn');
+  const aria3d = t('nav.aria3d');
+  if (nav3d && aria3d) nav3d.setAttribute('aria-label', aria3d);
+  if (hero3d && aria3d) hero3d.setAttribute('aria-label', aria3d);
+  const langSwitch = document.getElementById('langSwitch');
+  if (langSwitch) langSwitch.setAttribute('aria-label', t('aria.lang'));
+
+  document.querySelectorAll('.experience-list li[data-i18n-index]').forEach((li) => {
+    const i = parseInt(li.getAttribute('data-i18n-index'), 10);
+    const items = PORTFOLIO_I18N[lang].experience.items;
+    if (items[i] != null) li.textContent = items[i];
+  });
+
+  document.querySelectorAll('.model-3d-help').forEach((el) => {
+    el.textContent = t('models3d.help');
+  });
+
+  document.querySelectorAll('[data-i18n-level]').forEach((el) => {
+    const lvl = el.getAttribute('data-i18n-level');
+    const val = t('skills.' + lvl);
+    if (val) el.textContent = val;
+  });
+
+  document.body.classList.toggle('lang-en', lang === 'en');
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const saved = localStorage.getItem('portfolio-lang') || 'fr';
+  setPortfolioLanguage(saved);
+  document.querySelectorAll('.lang-btn').forEach((btn) => {
+    btn.addEventListener('click', () => setPortfolioLanguage(btn.dataset.lang));
+  });
+});

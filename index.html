@@ -939,6 +939,48 @@
     body.light-mode .theme-toggle { color: #555; }
     body.light-mode .theme-toggle:hover { color: #222; background: rgba(0,0,0,0.06); }
 
+    /* Language FR | EN */
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+    .lang-switch {
+      display: flex;
+      align-items: center;
+      gap: 0.1rem;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+    .lang-switch .sep {
+      color: #555;
+      user-select: none;
+      padding: 0 0.1rem;
+    }
+    .lang-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #707070;
+      padding: 0.35rem 0.4rem;
+      border-radius: 6px;
+      transition: color 0.2s, background 0.2s;
+      font-family: inherit;
+      font-size: inherit;
+      font-weight: inherit;
+    }
+    .lang-btn:hover { color: #e5e7eb; background: rgba(255,255,255,0.06); }
+    .lang-btn.active { color: #3b82f6; }
+    body.light-mode .lang-switch .sep { color: #bbb; }
+    body.light-mode .lang-btn { color: #888; }
+    body.light-mode .lang-btn:hover { color: #222; background: rgba(0,0,0,0.05); }
+    body.light-mode .lang-btn.active { color: #2563eb; }
+
+    body.lang-en .projet-card.clickable .projet-body::after {
+      content: 'View project →';
+    }
+
     /* ============================================
        LIGHT MODE OVERRIDES
     ============================================ */
@@ -1385,22 +1427,27 @@
     <div class="nav-container">
       <div class="nav-logo">Abdeldjallil <span>Z.</span></div>
       <ul class="nav-links" id="navLinks">
-        <li><a href="#profil">Profil</a></li>
-        <li><a href="#formation">Formation</a></li>
-        <li><a href="#experience">Expérience</a></li>
-        <li><a href="#competences">Compétences</a></li>
-        <li><a href="#section-3d" class="nav-3d-link" aria-label="Aller à la section 3D"><span>3D</span></a></li>
-        <li><a href="#certifications">Certifications</a></li>
-        <li><a href="#parcours">Parcours</a></li>
-        <li><a href="#projets">Projets</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#profil" data-i18n="nav.profil">Profil</a></li>
+        <li><a href="#formation" data-i18n="nav.formation">Formation</a></li>
+        <li><a href="#experience" data-i18n="nav.experience">Expérience</a></li>
+        <li><a href="#competences" data-i18n="nav.competences">Compétences</a></li>
+        <li><a href="#section-3d" class="nav-3d-link" id="nav3dLink" aria-label="Aller à la section 3D"><span>3D</span></a></li>
+        <li><a href="#certifications" data-i18n="nav.certifications">Certifications</a></li>
+        <li><a href="#parcours" data-i18n="nav.parcours">Parcours</a></li>
+        <li><a href="#projets" data-i18n="nav.projets">Projets</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
       </ul>
-      <div style="display:flex;align-items:center;gap:0.5rem;">
-        <button class="theme-toggle" id="themeToggle" aria-label="Changer le thème">
+      <div class="nav-actions">
+        <div class="lang-switch" role="group" id="langSwitch" aria-label="Choisir la langue">
+          <button type="button" class="lang-btn active" data-lang="fr" aria-pressed="true">FR</button>
+          <span class="sep" aria-hidden="true">|</span>
+          <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <button class="theme-toggle" id="themeToggle" data-i18n-aria="aria.theme" aria-label="Changer le thème">
           <i class="fas fa-sun"></i>
           <i class="fas fa-moon"></i>
         </button>
-        <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <button class="nav-toggle" id="navToggle" data-i18n-aria="aria.menu" aria-label="Menu">
           <i class="fas fa-bars"></i>
         </button>
       </div>
@@ -1412,24 +1459,24 @@
     <div id="engine-canvas"></div>
     <div class="hero-content">
       <div class="hero-text">
-        <div class="hero-badge"><i class="fas fa-cogs"></i>&nbsp; Ouvert aux opportunités d'alternance</div>
+        <div class="hero-badge"><i class="fas fa-cogs"></i>&nbsp;<span data-i18n="hero.badge">Ouvert aux opportunités d'alternance</span></div>
         <h1 class="hero-name">Abdeldjallil<br><span>Seif E. Zerrouni</span></h1>
-        <p class="hero-title">Étudiant en Génie Mécanique · L3 Université de Poitiers</p>
-        <p class="hero-desc">
+        <p class="hero-title" data-i18n="hero.title">Étudiant en Génie Mécanique · L3 Université de Poitiers</p>
+        <p class="hero-desc" data-i18n="hero.desc">
           Passionné par l'ingénierie mécanique, je cherche une alternance à partir de septembre 2026 pour confronter mes acquis universitaires au monde industriel. Ce portfolio regroupe un aperçu de mes projets d'ingénierie réalisés au fil de mon parcours.
         </p>
         <div class="hero-buttons">
-          <a href="#projets" class="btn btn-primary"><i class="fas fa-briefcase"></i> Mes Projets</a>
-          <a href="#section-3d" class="btn btn-3d-hero" aria-label="Aller à la section 3D">
+          <a href="#projets" class="btn btn-primary"><i class="fas fa-briefcase"></i> <span data-i18n="hero.btnProjects">Mes Projets</span></a>
+          <a href="#section-3d" class="btn btn-3d-hero" id="hero3dBtn" aria-label="Aller à la section 3D">
             <span class="btn-3d-diamond" aria-hidden="true"><span>3D</span></span>
-            <span class="btn-3d-text">3D interactif</span>
+            <span class="btn-3d-text" data-i18n="hero.btn3d">3D interactif</span>
           </a>
-          <a href="#experience" class="btn btn-outline"><i class="fas fa-building"></i> Mon expérience</a>
-          <a href="#contact" class="btn btn-outline"><i class="fas fa-envelope"></i> Me Contacter</a>
+          <a href="#experience" class="btn btn-outline"><i class="fas fa-building"></i> <span data-i18n="hero.btnExperience">Mon expérience</span></a>
+          <a href="#contact" class="btn btn-outline"><i class="fas fa-envelope"></i> <span data-i18n="hero.btnContact">Me Contacter</span></a>
         </div>
       </div>
       <div class="hero-image">
-        <img src="pica.png" alt="Photo de profil" class="hero-photo">
+        <img src="pica.png" alt="Photo de profil" class="hero-photo" id="heroPhoto" data-i18n-alt="hero.altPhoto">
       </div>
     </div>
   </section>
@@ -1438,9 +1485,9 @@
   <section class="profil" id="profil">
     <div class="section-container">
       <div class="section-line" data-aos="fade-up"></div>
-      <h2 class="section-title" data-aos="fade-up" data-aos-delay="50">À <span>Propos</span></h2>
-      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Mon parcours et mes ambitions</p>
-      <div class="profil-content" data-aos="fade-up" data-aos-delay="150">
+      <h2 class="section-title" data-aos="fade-up" data-aos-delay="50" data-i18n-html="profil.title">À <span>Propos</span></h2>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100" data-i18n="profil.subtitle">Mon parcours et mes ambitions</p>
+      <div class="profil-content" data-aos="fade-up" data-aos-delay="150" data-i18n="profil.text">
         Étudiant en troisième année de Licence Génie Mécanique à l'Université de Poitiers, je bénéficie d'un parcours international ayant débuté en Pologne, à Kielce University of Technology, où j'ai suivi deux années de formation en anglais. Cette expérience m'a permis d'acquérir une aisance en anglais, aussi bien à l'oral qu'à l'écrit, notamment en anglais technique, et de m'adapter pleinement à un environnement bilingue. J'y ai également acquis des bases solides en SolidWorks ainsi qu'une première expérience en programmation CNC. À Poitiers, ma maîtrise de SolidWorks s'est approfondie au fil de nombreux projets de bureau d'études, allant de la conception de pièces mécanosoudées aux simulations de résistance des matériaux. J'ai également développé une solide compétence en automatisme — analyse de cahier des charges, rédaction de GRAFCET — avec la programmation en Structured Text sur B&R Automation Studio. Désireux de confronter mes acquis au monde professionnel, je suis activement à la recherche d'une alternance en ingénierie mécanique à partir de septembre 2026.
       </div>
     </div>
@@ -1450,19 +1497,19 @@
   <section class="formation" id="formation">
     <div class="section-container">
       <div class="section-line" data-aos="fade-up"></div>
-      <h2 class="section-title" data-aos="fade-up" data-aos-delay="50"><span>Formation</span></h2>
-      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Mon cursus académique</p>
+      <h2 class="section-title" data-aos="fade-up" data-aos-delay="50" data-i18n-html="formation.title"><span>Formation</span></h2>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100" data-i18n="formation.subtitle">Mon cursus académique</p>
       <div class="formation-grid">
 
         <!-- Poitiers -->
         <div class="formation-card" data-aos="fade-up" data-aos-delay="150">
           <div class="formation-header">
             <div>
-              <div class="formation-school">Université de Poitiers</div>
-              <div class="formation-degree">Licence Génie Mécanique — L3</div>
+              <div class="formation-school" data-i18n="formation.poitiers.school">Université de Poitiers</div>
+              <div class="formation-degree" data-i18n="formation.poitiers.degree">Licence Génie Mécanique — L3</div>
               <div class="formation-location"><i class="fas fa-map-marker-alt"></i> Poitiers, France</div>
             </div>
-            <span class="formation-date">2025 — Présent</span>
+            <span class="formation-date" data-i18n="formation.poitiers.date">2025 — Présent</span>
           </div>
           <div class="semester-circles" data-group="poitiers">
             <div class="semester-circle" data-semester="s5">S5</div>
@@ -1492,11 +1539,11 @@
         <div class="formation-card" data-aos="fade-up" data-aos-delay="200">
           <div class="formation-header">
             <div>
-              <div class="formation-school">Kielce University of Technology</div>
-              <div class="formation-degree">Licence Génie Mécanique — L1 / L2</div>
+              <div class="formation-school" data-i18n="formation.kielce.school">Kielce University of Technology</div>
+              <div class="formation-degree" data-i18n="formation.kielce.degree">Licence Génie Mécanique — L1 / L2</div>
               <div class="formation-location"><i class="fas fa-map-marker-alt"></i> Kielce, Pologne</div>
             </div>
-            <span class="formation-date">2023 — 2025</span>
+            <span class="formation-date" data-i18n="formation.kielce.date">2023 — 2025</span>
           </div>
           <div class="semester-circles" data-group="kielce">
             <div class="semester-circle" data-semester="s1">S1</div>
@@ -1578,8 +1625,8 @@
   <section class="experience-section" id="experience">
     <div class="section-container experience-inner">
       <div class="section-line" data-aos="fade-up"></div>
-      <h2 class="section-title" data-aos="fade-up" data-aos-delay="50">Expérience <span>professionnelle</span></h2>
-      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Stage en entreprise</p>
+      <h2 class="section-title" data-aos="fade-up" data-aos-delay="50" data-i18n-html="experience.title">Expérience <span>professionnelle</span></h2>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100" data-i18n="experience.subtitle">Stage en entreprise</p>
 
       <div class="experience-card" data-aos="fade-up" data-aos-delay="150">
         <div class="experience-header">
@@ -1591,23 +1638,23 @@
               <span class="experience-company">SAS Archeli</span>
               <span class="experience-location-inline"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Tavaux, Bourgogne-Franche-Comté</span>
             </div>
-            <div class="experience-role">Stagiaire-Mise en plan technique &amp; la modélisation 3D paramétrique-Bains nordiques</div>
-            <div class="experience-dates"><i class="far fa-calendar-alt"></i> Avril 2026 — Juin 2026</div>
+            <div class="experience-role" data-i18n="experience.role">Stagiaire-Mise en plan technique &amp; la modélisation 3D paramétrique-Bains nordiques</div>
+            <div class="experience-dates"><i class="far fa-calendar-alt"></i> <span data-i18n="experience.dates">Avril 2026 — Juin 2026</span></div>
           </div>
         </div>
         <ul class="experience-list">
-          <li>Modélisation 3D paramétrique des bains nordiques sous SOLIDWORKS.</li>
-          <li>Réalisation de relevés précis en atelier (pièces bois, assemblages, cuves, équipements).</li>
-          <li>Modélisation complète pièces et ensembles.</li>
-          <li>Création de plans d’ensemble et plans de détail cotés.</li>
-          <li>Réalisation de vues éclatées et coupes techniques.</li>
-          <li>Préparation de dossiers prêts pour la fabrication.</li>
-          <li>Création de fiches techniques produits.</li>
-          <li>Élaboration des nomenclatures (bois, quincaillerie, équipements, options).</li>
-          <li>Formalisation des procédures de fabrication.</li>
-          <li>Rédaction de plans d’installation pour les clients.</li>
-          <li>Observation des méthodes actuelles, identification des points d’optimisation, proposition d’améliorations applicables.</li>
-          <li>Participation à la structuration progressive de l’atelier.</li>
+          <li data-i18n-index="0">Modélisation 3D paramétrique des bains nordiques sous SOLIDWORKS.</li>
+          <li data-i18n-index="1">Réalisation de relevés précis en atelier (pièces bois, assemblages, cuves, équipements).</li>
+          <li data-i18n-index="2">Modélisation complète pièces et ensembles.</li>
+          <li data-i18n-index="3">Création de plans d’ensemble et plans de détail cotés.</li>
+          <li data-i18n-index="4">Réalisation de vues éclatées et coupes techniques.</li>
+          <li data-i18n-index="5">Préparation de dossiers prêts pour la fabrication.</li>
+          <li data-i18n-index="6">Création de fiches techniques produits.</li>
+          <li data-i18n-index="7">Élaboration des nomenclatures (bois, quincaillerie, équipements, options).</li>
+          <li data-i18n-index="8">Formalisation des procédures de fabrication.</li>
+          <li data-i18n-index="9">Rédaction de plans d’installation pour les clients.</li>
+          <li data-i18n-index="10">Observation des méthodes actuelles, identification des points d’optimisation, proposition d’améliorations applicables.</li>
+          <li data-i18n-index="11">Participation à la structuration progressive de l’atelier.</li>
         </ul>
       </div>
     </div>
@@ -1617,14 +1664,14 @@
   <section class="competences" id="competences">
     <div class="section-container">
       <div class="section-line" data-aos="fade-up"></div>
-      <h2 class="section-title" data-aos="fade-up" data-aos-delay="50">Compétences &amp; <span>Expertise</span></h2>
-      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Mes outils et savoir-faire</p>
+      <h2 class="section-title" data-aos="fade-up" data-aos-delay="50" data-i18n-html="skills.title">Compétences &amp; <span>Expertise</span></h2>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100" data-i18n="skills.subtitle">Mes outils et savoir-faire</p>
 
       <div class="skills-categories" data-aos="fade-up" data-aos-delay="150">
-        <button class="skill-cat-btn active" data-cat="all">Toutes</button>
-        <button class="skill-cat-btn" data-cat="meca">Génie Mécanique</button>
-        <button class="skill-cat-btn" data-cat="auto">Automatisme</button>
-        <button class="skill-cat-btn" data-cat="additional">Complémentaires</button>
+        <button class="skill-cat-btn active" data-cat="all" data-i18n="skills.all">Toutes</button>
+        <button class="skill-cat-btn" data-cat="meca" data-i18n="skills.meca">Génie Mécanique</button>
+        <button class="skill-cat-btn" data-cat="auto" data-i18n="skills.auto">Automatisme</button>
+        <button class="skill-cat-btn" data-cat="additional" data-i18n="skills.additional">Complémentaires</button>
       </div>
 
       <div class="skills-grid" id="skillsGrid">
@@ -1632,35 +1679,35 @@
         <div class="skill-card" data-category="meca" data-aos="fade-up" data-aos-delay="200">
           <div class="skill-icon"><i class="fas fa-drafting-compass"></i></div>
           <div class="skill-name">SolidWorks</div>
-          <div class="skill-level">Avancé</div>
+          <div class="skill-level" data-i18n-level="advanced">Avancé</div>
           <div class="skill-bar-container"><div class="skill-bar" style="width: 90%"></div></div>
         </div>
 
         <div class="skill-card" data-category="meca" data-aos="fade-up" data-aos-delay="250">
           <div class="skill-icon"><i class="fab fa-python"></i></div>
           <div class="skill-name">Python (NumPy)</div>
-          <div class="skill-level">Intermédiaire</div>
+          <div class="skill-level" data-i18n-level="intermediate">Intermédiaire</div>
           <div class="skill-bar-container"><div class="skill-bar" style="width: 50%"></div></div>
         </div>
 
         <div class="skill-card" data-category="auto" data-aos="fade-up" data-aos-delay="300">
           <div class="skill-icon"><i class="fas fa-microchip"></i></div>
           <div class="skill-name">B&R Automation Studio</div>
-          <div class="skill-level">Intermédiaire</div>
+          <div class="skill-level" data-i18n-level="intermediate">Intermédiaire</div>
           <div class="skill-bar-container"><div class="skill-bar" style="width: 65%"></div></div>
         </div>
 
         <div class="skill-card" data-category="additional" data-aos="fade-up" data-aos-delay="350">
           <div class="skill-icon"><i class="fas fa-file-alt"></i></div>
           <div class="skill-name">LaTeX</div>
-          <div class="skill-level">Avancé</div>
+          <div class="skill-level" data-i18n-level="advanced">Avancé</div>
           <div class="skill-bar-container"><div class="skill-bar" style="width: 90%"></div></div>
         </div>
 
         <div class="skill-card" data-category="additional" data-aos="fade-up" data-aos-delay="400">
           <div class="skill-icon"><i class="fas fa-file-excel"></i></div>
           <div class="skill-name">Microsoft Office</div>
-          <div class="skill-level">Avancé</div>
+          <div class="skill-level" data-i18n-level="advanced">Avancé</div>
           <div class="skill-bar-container"><div class="skill-bar" style="width: 90%"></div></div>
         </div>
 
@@ -1672,14 +1719,14 @@
   <section class="langues" id="langues">
     <div class="section-container">
       <div class="section-line" data-aos="fade-up"></div>
-      <h2 class="section-title" data-aos="fade-up" data-aos-delay="50"><span>Langues</span></h2>
-      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Mes compétences linguistiques</p>
+      <h2 class="section-title" data-aos="fade-up" data-aos-delay="50" data-i18n-html="langues.title"><span>Langues</span></h2>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100" data-i18n="langues.subtitle">Mes compétences linguistiques</p>
       <div class="langues-grid">
 
         <div class="langue-card" data-aos="fade-up" data-aos-delay="150">
           <div class="langue-flag">🇬🇧</div>
           <div class="langue-info">
-            <div class="langue-name">Anglais</div>
+            <div class="langue-name" data-i18n="langues.english">Anglais</div>
             <div class="langue-level">C1 — IELTS</div>
             <div class="langue-bar-container"><div class="langue-bar" style="width: 85%"></div></div>
           </div>
@@ -1688,7 +1735,7 @@
         <div class="langue-card" data-aos="fade-up" data-aos-delay="200">
           <div class="langue-flag">🇫🇷</div>
           <div class="langue-info">
-            <div class="langue-name">Français</div>
+            <div class="langue-name" data-i18n="langues.french">Français</div>
             <div class="langue-level">C1 — TCF</div>
             <div class="langue-bar-container"><div class="langue-bar" style="width: 85%"></div></div>
           </div>
@@ -1697,8 +1744,8 @@
         <div class="langue-card" data-aos="fade-up" data-aos-delay="250">
           <div class="langue-flag">🇩🇿</div>
           <div class="langue-info">
-            <div class="langue-name">Arabe</div>
-            <div class="langue-level">Langue maternelle</div>
+            <div class="langue-name" data-i18n="langues.arabic">Arabe</div>
+            <div class="langue-level" data-i18n="langues.native">Langue maternelle</div>
             <div class="langue-bar-container"><div class="langue-bar" style="width: 100%"></div></div>
           </div>
         </div>
@@ -1711,8 +1758,8 @@
   <section class="certifications" id="certifications">
     <div class="section-container">
       <div class="section-line" data-aos="fade-up"></div>
-      <h2 class="section-title" data-aos="fade-up" data-aos-delay="50">Mes <span>Certifications</span></h2>
-      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Certifications professionnelles obtenues</p>
+      <h2 class="section-title" data-aos="fade-up" data-aos-delay="50" data-i18n-html="cert.title">Mes <span>Certifications</span></h2>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100" data-i18n="cert.subtitle">Certifications professionnelles obtenues</p>
 
       <div class="certifications-grid">
 
@@ -1721,7 +1768,7 @@
             <img src="cswa_logo.png" alt="CSWA - SolidWorks Design Associate">
           </div>
           <div class="cert-label">CSWA — SolidWorks<br>Design Associate</div>
-          <div class="cert-date">Février 2026</div>
+          <div class="cert-date" data-i18n="cert.date">Février 2026</div>
         </div>
 
       </div>
@@ -1732,8 +1779,8 @@
   <section class="timeline-section" id="parcours">
     <div class="section-container">
       <div class="section-line" data-aos="fade-up"></div>
-      <h2 class="section-title" data-aos="fade-up" data-aos-delay="50">Mon <span>Parcours</span></h2>
-      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Les étapes clés de ma formation</p>
+      <h2 class="section-title" data-aos="fade-up" data-aos-delay="50" data-i18n-html="parcours.title">Mon <span>Parcours</span></h2>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100" data-i18n="parcours.subtitle">Les étapes clés de ma formation</p>
 
       <div class="timeline">
 
@@ -1745,7 +1792,7 @@
             <div class="timeline-card-body">
               <div class="timeline-year">2023 — 2025</div>
               <h3 class="timeline-card-title">Kielce University of Technology</h3>
-              <p class="timeline-card-text">
+              <p class="timeline-card-text" data-i18n="parcours.kielceText">
                 Deux années d'études en anglais au sein de Kielce University of Technology en Pologne, où j'ai acquis des bases solides en génie mécanique. J'ai eu l'opportunité de travailler sur des machines CNC et de développer une compréhension approfondie des procédés de fabrication. Cette expérience internationale m'a permis de renforcer mon niveau d'anglais et de m'adapter à un environnement multiculturel.
               </p>
             </div>
@@ -1756,16 +1803,16 @@
         <div class="timeline-item" data-aos="fade-left" data-aos-delay="200">
           <div class="timeline-dot"></div>
           <div class="timeline-card timeline-card-tabs">
-            <div class="timeline-tabs-row" role="tablist" aria-label="Poitiers : formation ou stage">
-              <button type="button" class="timeline-tab active" role="tab" aria-selected="true" data-timeline-tab="poitiers-uni" id="tab-poitiers-uni">Université</button>
-              <button type="button" class="timeline-tab" role="tab" aria-selected="false" data-timeline-tab="poitiers-stage" id="tab-poitiers-stage">Stage</button>
+            <div class="timeline-tabs-row" role="tablist" id="poitiersTablist" data-i18n-aria="parcours.tabAria" aria-label="Poitiers : formation ou stage">
+              <button type="button" class="timeline-tab active" role="tab" aria-selected="true" data-timeline-tab="poitiers-uni" id="tab-poitiers-uni" data-i18n="parcours.tabUni">Université</button>
+              <button type="button" class="timeline-tab" role="tab" aria-selected="false" data-timeline-tab="poitiers-stage" id="tab-poitiers-stage" data-i18n="parcours.tabStage">Stage</button>
             </div>
             <div class="timeline-tab-panel active" role="tabpanel" data-timeline-panel="poitiers-uni" aria-labelledby="tab-poitiers-uni">
               <img src="ville2.png" alt="Poitiers, France" class="timeline-card-image">
               <div class="timeline-card-body">
                 <div class="timeline-year">2025 — Présent</div>
                 <h3 class="timeline-card-title">Université de Poitiers</h3>
-                <p class="timeline-card-text">
+                <p class="timeline-card-text" data-i18n="parcours.poitiersText">
                   En intégrant l'Université de Poitiers en L3, j'ai eu la chance de travailler sur de nombreux projets de conception mécanique en travaux pratiques, ce qui a considérablement renforcé ma maîtrise de SolidWorks. J'ai également découvert l'automatisme avec B&R Automation Studio et acquis de bonnes bases en programmation ST. Ces projets concrets m'ont permis de développer une approche rigoureuse de l'ingénierie mécanique.
                 </p>
               </div>
@@ -1774,13 +1821,13 @@
               <div class="timeline-stage-banner">
                 <div class="timeline-stage-banner-caption">
                   <img src="archeli_logo.png" alt="" width="38" height="38" loading="lazy">
-                  <span>SAS Archeli — Bains nordiques</span>
+                  <span data-i18n="parcours.stageBanner">SAS Archeli — Bains nordiques</span>
                 </div>
               </div>
               <div class="timeline-card-body">
                 <div class="timeline-year">Avril 2026 — Juin 2026</div>
-                <h3 class="timeline-card-title timeline-card-title-sm">Stage — SAS Archeli</h3>
-                <p class="timeline-card-text">
+                <h3 class="timeline-card-title timeline-card-title-sm" data-i18n="parcours.stageTitle">Stage — SAS Archeli</h3>
+                <p class="timeline-card-text" data-i18n-html="parcours.stageText">
                   Stagiaire : mise en plan technique et modélisation 3D paramétrique (SOLIDWORKS), relevés atelier, plans, nomenclatures et dossiers fabrication. <a class="inline-link" href="#experience">Voir le détail de la mission ↓</a>
                 </p>
               </div>
@@ -1796,13 +1843,13 @@
   <section class="projets" id="projets">
     <div class="section-container">
       <div class="section-line" data-aos="fade-up"></div>
-      <h2 class="section-title" data-aos="fade-up" data-aos-delay="50">Galerie de <span>Projets</span></h2>
-      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Mes réalisations en bureau d'études</p>
+      <h2 class="section-title" data-aos="fade-up" data-aos-delay="50" data-i18n-html="projets.title">Galerie de <span>Projets</span></h2>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100" data-i18n="projets.subtitle">Mes réalisations en bureau d'études</p>
 
       <div class="projets-filters" data-aos="fade-up" data-aos-delay="150">
-        <button class="skill-cat-btn active" data-filter="all">Tous les projets</button>
-        <button class="skill-cat-btn" data-filter="meca">Génie Mécanique</button>
-        <button class="skill-cat-btn" data-filter="auto">Automatisme</button>
+        <button class="skill-cat-btn active" data-filter="all" data-i18n="projets.all">Tous les projets</button>
+        <button class="skill-cat-btn" data-filter="meca" data-i18n="projets.meca">Génie Mécanique</button>
+        <button class="skill-cat-btn" data-filter="auto" data-i18n="projets.auto">Automatisme</button>
       </div>
 
       <div class="projets-grid" id="projetsGrid">
@@ -1812,8 +1859,8 @@
           <span class="projet-badge">L3</span>
           <div class="projet-image"><img src="ridoir_theme.png" alt="Ridoir hydraulique" style="width:100%;height:100%;object-fit:contain;background:#f5f5f5;padding:0.5rem;"></div>
           <div class="projet-body">
-            <div class="projet-title">Ridoir hydraulique — Re-conception mécano-soudée</div>
-            <p class="projet-desc">Re-conception et optimisation d'un ridoir mécano-soudé : simplification, simulation éléments finis et allègement de 32%.</p>
+            <div class="projet-title" data-i18n="projets.ridoir.title">Ridoir hydraulique — Re-conception mécano-soudée</div>
+            <p class="projet-desc" data-i18n="projets.ridoir.desc">Re-conception et optimisation d'un ridoir mécano-soudé : simplification, simulation éléments finis et allègement de 32%.</p>
             <div class="projet-tags">
               <span class="projet-tag">SolidWorks</span>
               <span class="projet-tag">Simulation FEA</span>
@@ -1827,8 +1874,8 @@
           <span class="projet-badge">L3</span>
           <div class="projet-image"><img src="multi_plan_ensemble.png" alt="Multiplicateur de pression" style="width:100%;height:100%;object-fit:contain;background:#f5f5f5;padding:0.5rem;"></div>
           <div class="projet-body">
-            <div class="projet-title">Multiplicateur de pression hydraulique</div>
-            <p class="projet-desc">Conception et optimisation de pièces de fonderie aluminium pour vérin hydraulique : tête de vérin et embase, validées par simulation FEA.</p>
+            <div class="projet-title" data-i18n="projets.multi.title">Multiplicateur de pression hydraulique</div>
+            <p class="projet-desc" data-i18n="projets.multi.desc">Conception et optimisation de pièces de fonderie aluminium pour vérin hydraulique : tête de vérin et embase, validées par simulation FEA.</p>
             <div class="projet-tags">
               <span class="projet-tag">SolidWorks</span>
               <span class="projet-tag">Fonderie</span>
@@ -1842,8 +1889,8 @@
           <span class="projet-badge">L3</span>
           <div class="projet-image"><img src="usinage_theme.png" alt="Montage d'usinage" style="width:100%;height:100%;object-fit:contain;background:#f5f5f5;padding:0.5rem;"></div>
           <div class="projet-body">
-            <div class="projet-title">Montage d'usinage — Perçage de pièces cylindriques</div>
-            <p class="projet-desc">Conception d'un montage d'usinage isostatique pour le perçage de pièces cylindriques sur perceuse à colonne.</p>
+            <div class="projet-title" data-i18n="projets.usinage.title">Montage d'usinage — Perçage de pièces cylindriques</div>
+            <p class="projet-desc" data-i18n="projets.usinage.desc">Conception d'un montage d'usinage isostatique pour le perçage de pièces cylindriques sur perceuse à colonne.</p>
             <div class="projet-tags">
               <span class="projet-tag">SolidWorks</span>
               <span class="projet-tag">Isostatisme</span>
@@ -1857,8 +1904,8 @@
           <span class="projet-badge">L2</span>
           <div class="projet-image"><img src="cnc_3d_iso.png" alt="Programmation CNC Heidenhain" style="width:100%;height:100%;object-fit:cover;"></div>
           <div class="projet-body">
-            <div class="projet-title">Programmation CNC — Heidenhain iTNC 530</div>
-            <p class="projet-desc">Développement d'un programme d'usinage complet pour une pièce 150×100 mm : contournage, poches, rainures et perçage.</p>
+            <div class="projet-title" data-i18n="projets.cnc.title">Programmation CNC — Heidenhain iTNC 530</div>
+            <p class="projet-desc" data-i18n="projets.cnc.desc">Développement d'un programme d'usinage complet pour une pièce 150×100 mm : contournage, poches, rainures et perçage.</p>
             <div class="projet-tags">
               <span class="projet-tag">SolidWorks</span>
               <span class="projet-tag">Heidenhain</span>
@@ -1872,8 +1919,8 @@
           <span class="projet-badge">L3</span>
           <div class="projet-image"><img src="renvoi_theme.png" alt="Renvoi conique aéronautique" style="width:100%;height:100%;object-fit:contain;background:#f5f5f5;padding:0.5rem;"></div>
           <div class="projet-body">
-            <div class="projet-title">Renvoi conique aéronautique — Conception et modélisation CAO</div>
-            <p class="projet-desc">Conception d'un renvoi conique aéronautique : dimensionnement des roulements, modélisation des engrenages et étude comparative de deux architectures de carter.</p>
+            <div class="projet-title" data-i18n="projets.renvoi.title">Renvoi conique aéronautique — Conception et modélisation CAO</div>
+            <p class="projet-desc" data-i18n="projets.renvoi.desc">Conception d'un renvoi conique aéronautique : dimensionnement des roulements, modélisation des engrenages et étude comparative de deux architectures de carter.</p>
             <div class="projet-tags">
               <span class="projet-tag">SolidWorks</span>
               <span class="projet-tag">Dimensionnement</span>
@@ -1887,8 +1934,8 @@
           <span class="projet-badge">L3</span>
           <div class="projet-image"><img src="poteyage_thumb.png" alt="Machine de poteyage" style="width:100%;height:100%;object-fit:cover;"></div>
           <div class="projet-body">
-            <div class="projet-title">Machine de poteyage sur portique cartésien</div>
-            <p class="projet-desc">Programmation du cycle automatisé d'une machine de poteyage pour le dépôt de carbone sur demi-moules en verre, avec balayage en zigzag via portique cartésien.</p>
+            <div class="projet-title" data-i18n="projets.poteyage.title">Machine de poteyage sur portique cartésien</div>
+            <p class="projet-desc" data-i18n="projets.poteyage.desc">Programmation du cycle automatisé d'une machine de poteyage pour le dépôt de carbone sur demi-moules en verre, avec balayage en zigzag via portique cartésien.</p>
             <div class="projet-tags">
               <span class="projet-tag">B&amp;R Automation Studio</span>
               <span class="projet-tag">Structured Text</span>
@@ -3266,11 +3313,11 @@ END_TYPE</pre>
     <div class="section-container">
       <div class="section-line" data-aos="fade-up"></div>
       <h2 class="section-title" data-aos="fade-up" data-aos-delay="50"><span>3D</span></h2>
-      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Modèles 3D interactifs de pièces que j'ai créées en CAO pour en comprendre le fonctionnement mécanique</p>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100" data-i18n="models3d.subtitle">Modèles 3D interactifs de pièces que j'ai créées en CAO pour en comprendre le fonctionnement mécanique</p>
       <div class="model-3d-section-stack">
         <div class="model-3d-grid">
           <div class="model-3d-card" data-aos="fade-up" data-aos-delay="50">
-            <h3 class="model-3d-title">Bras robotique 4 DDL</h3>
+            <h3 class="model-3d-title" data-i18n="models3d.arm">Bras robotique 4 DDL</h3>
             <model-viewer
               class="model-3d-viewer"
               src="4_DOF_Robotic_Arm.glb"
@@ -3283,7 +3330,7 @@ END_TYPE</pre>
             <p class="model-3d-help">Clique et fais glisser pour tourner, utilise la molette pour zoomer.</p>
           </div>
           <div class="model-3d-card" data-aos="fade-up" data-aos-delay="62">
-            <h3 class="model-3d-title">Alternateur</h3>
+            <h3 class="model-3d-title" data-i18n="models3d.alternator">Alternateur</h3>
             <model-viewer
               class="model-3d-viewer"
               src="alternator.glb"
@@ -3298,7 +3345,7 @@ END_TYPE</pre>
         </div>
         <div class="model-3d-featured" data-aos="fade-up" data-aos-delay="75">
           <div class="model-3d-card">
-            <h3 class="model-3d-title">Génératrice synchrone</h3>
+            <h3 class="model-3d-title" data-i18n="models3d.generator">Génératrice synchrone</h3>
             <model-viewer
               class="model-3d-viewer model-3d-viewer--natural"
               src="ans_big_synchronous_generator.glb"
@@ -3315,7 +3362,7 @@ END_TYPE</pre>
         </div>
         <div class="model-3d-grid">
           <div class="model-3d-card" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="model-3d-title">Pompe centrifuge</h3>
+            <h3 class="model-3d-title" data-i18n="models3d.pump">Pompe centrifuge</h3>
             <model-viewer
               class="model-3d-viewer model-3d-viewer--natural"
               src="Centrifugal_Pump.glb"
@@ -3330,7 +3377,7 @@ END_TYPE</pre>
             <p class="model-3d-help">Clique et fais glisser pour tourner, utilise la molette pour zoomer.</p>
           </div>
           <div class="model-3d-card" data-aos="fade-up" data-aos-delay="112">
-            <h3 class="model-3d-title">Cintreuse hydraulique de tubes</h3>
+            <h3 class="model-3d-title" data-i18n="models3d.bender">Cintreuse hydraulique de tubes</h3>
             <model-viewer
               class="model-3d-viewer"
               src="Hydraulic_Pipe_Bending_Machine.glb"
@@ -3345,7 +3392,7 @@ END_TYPE</pre>
         </div>
         <div class="model-3d-grid">
           <div class="model-3d-card" data-aos="fade-up" data-aos-delay="150">
-            <h3 class="model-3d-title">Téléphone mobile</h3>
+            <h3 class="model-3d-title" data-i18n="models3d.phone">Téléphone mobile</h3>
             <model-viewer
               class="model-3d-viewer"
               src="Mobile_Phone_2021.glb"
@@ -3358,7 +3405,7 @@ END_TYPE</pre>
             <p class="model-3d-help">Clique et fais glisser pour tourner, utilise la molette pour zoomer.</p>
           </div>
           <div class="model-3d-card" data-aos="fade-up" data-aos-delay="200">
-            <h3 class="model-3d-title">Souris</h3>
+            <h3 class="model-3d-title" data-i18n="models3d.mouse">Souris</h3>
             <model-viewer
               class="model-3d-viewer"
               src="Mouse_Assembly_2021.glb"
@@ -3373,7 +3420,7 @@ END_TYPE</pre>
         </div>
         <div class="model-3d-grid">
           <div class="model-3d-card" data-aos="fade-up" data-aos-delay="250">
-            <h3 class="model-3d-title">Manette</h3>
+            <h3 class="model-3d-title" data-i18n="models3d.gamepad">Manette</h3>
             <model-viewer
               class="model-3d-viewer"
               src="Game_Controller_Assembly_2021.glb"
@@ -3386,7 +3433,7 @@ END_TYPE</pre>
             <p class="model-3d-help">Clique et fais glisser pour tourner, utilise la molette pour zoomer.</p>
           </div>
           <div class="model-3d-card" data-aos="fade-up" data-aos-delay="300">
-            <h3 class="model-3d-title">Lego</h3>
+            <h3 class="model-3d-title" data-i18n="models3d.lego">Lego</h3>
             <model-viewer
               class="model-3d-viewer"
               src="Lego_Figure_Assy_2021.glb"
@@ -3407,8 +3454,8 @@ END_TYPE</pre>
   <section class="contact" id="contact">
     <div class="section-container">
       <div class="section-line" data-aos="fade-up"></div>
-      <h2 class="section-title" data-aos="fade-up" data-aos-delay="50">Me <span>Contacter</span></h2>
-      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">N'hésitez pas à me joindre</p>
+      <h2 class="section-title" data-aos="fade-up" data-aos-delay="50" data-i18n-html="contact.title">Me <span>Contacter</span></h2>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100" data-i18n="contact.subtitle">N'hésitez pas à me joindre</p>
 
       <div class="contact-grid">
 
@@ -3420,7 +3467,7 @@ END_TYPE</pre>
 
         <a href="tel:+33758752848" class="contact-card" data-aos="fade-up" data-aos-delay="200">
           <div class="contact-icon"><i class="fas fa-phone"></i></div>
-          <div class="contact-label">Téléphone</div>
+          <div class="contact-label" data-i18n="contact.phone">Téléphone</div>
           <div class="contact-value">+33 7 58 75 28 48</div>
         </a>
 
@@ -3436,13 +3483,14 @@ END_TYPE</pre>
 
   <!-- ==================== FOOTER ==================== -->
   <footer>
-    <p>&copy; 2026 — Abdeldjallil Seif E. Zerrouni · Portfolio Génie Mécanique</p>
+    <p data-i18n="footer">&copy; 2026 — Abdeldjallil Seif E. Zerrouni · Portfolio Génie Mécanique</p>
   </footer>
 
   <!-- Back to top button -->
-  <button id="backToTop" aria-label="Retour en haut"><i class="fas fa-chevron-up"></i></button>
+  <button id="backToTop" data-i18n-aria="aria.backTop" aria-label="Retour en haut"><i class="fas fa-chevron-up"></i></button>
 
   <!-- ==================== JAVASCRIPT ==================== -->
+  <script src="i18n.js"></script>
   <script>
     // Initialisation AOS (Animate On Scroll)
     document.addEventListener('DOMContentLoaded', function() {
