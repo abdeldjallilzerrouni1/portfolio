@@ -26,7 +26,7 @@ window.PORTFOLIO_I18N = {
     profil: {
       title: 'À <span>Propos</span>',
       subtitle: 'Mon parcours et mes ambitions',
-      text: "Licencié en génie mécanique (Université de Poitiers), après un parcours international en anglais à Kielce (Pologne), je me spécialise aujourd’hui en conception et simulation en CAO (SolidWorks, projets bureau d’études, automatisme). Deux stages m’ont mis en situation professionnelle : chez SAS Archeli (modélisation 3D et mise en plan de bains nordiques) et chez SNRI (vannes industrielles, bureau des méthodes, plans cotés et simulation). En 2026, j’intègre le Master à l’Université Sorbonne Paris Nord — modélisation et simulation mécanique : ce cursus complètera mon profil d’ingénieur mécanicien avec des bases solides en calcul mécanique et en science des matériaux. Je reste ouvert aux opportunités d’alternance à partir de septembre 2026."
+      text: "Après une licence en génie mécanique à Poitiers et un parcours en anglais à Kielce (Pologne), je me concentre sur la conception et la simulation (SolidWorks, bureau d’études, automatisme). Deux stages m’ont exposé au monde industriel : SAS Archeli (3D et mise en plan — bains nordiques) et SNRI (vannes, méthodes, plans cotés, simulation). En 2026, j’intègre le Master à l’Université Sorbonne Paris Nord (modélisation et simulation mécanique) : cette formation à l’USPN renforcera mon profil d’ingénieur mécanicien grâce à un socle solide en calcul mécanique et en science des matériaux. Je reste ouvert à une alternance à partir de septembre 2026."
     },
     formation: {
       title: '<span>Formation</span>',
@@ -196,7 +196,7 @@ window.PORTFOLIO_I18N = {
     profil: {
       title: 'About <span>Me</span>',
       subtitle: 'My background and goals',
-      text: 'I hold a BSc in mechanical engineering from the University of Poitiers, following two years of study in English at Kielce University of Technology (Poland). I focus on CAD design and simulation (SolidWorks, design-office projects, automation). Two internships gave me hands-on experience: at SAS Archeli (parametric 3D modeling and technical drafting for Nordic baths) and at SNRI (industrial valves, methods office, dimensioned drawings, and simulation). In 2026 I join the master’s program at Université Sorbonne Paris Nord—mechanical modeling and simulation—which will make me a more complete mechanical engineer with stronger skills in mechanical analysis and materials science. I remain open to apprenticeship opportunities from September 2026.'
+      text: 'After a BSc in mechanical engineering in Poitiers and two years of study in English in Kielce (Poland), I focus on design and simulation (SolidWorks, design office, automation). Two internships exposed me to industry: SAS Archeli (3D modeling and drafting—Nordic baths) and SNRI (valves, methods, dimensioned drawings, simulation). In 2026 I join the master’s at Université Sorbonne Paris Nord (mechanical modeling and simulation); this program will make me a more complete mechanical engineer with strong foundations in mechanical analysis and materials science. I am open to an apprenticeship from September 2026.'
     },
     formation: {
       title: '<span>Education</span>',
