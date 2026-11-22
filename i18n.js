@@ -343,10 +343,42 @@ function setPortfolioLanguage(lang) {
     if (val) el.textContent = val;
   });
 
+  swapModalLanguage(lang);
   document.body.classList.toggle('lang-en', lang === 'en');
 }
 
+/** Enveloppe le contenu traduisible de chaque modale projet (sans le bouton fermer). */
+function initModalI18n() {
+  document.querySelectorAll('.projet-modal').forEach((modal) => {
+    const content = modal.querySelector('.modal-content');
+    if (!content || content.querySelector('.modal-translatable')) return;
+    const closeBtn = content.querySelector('.modal-close');
+    if (!closeBtn) return;
+    const wrapper = document.createElement('div');
+    wrapper.className = 'modal-translatable';
+    wrapper.id = 'modalBody-' + modal.id;
+    while (closeBtn.nextSibling) {
+      wrapper.appendChild(closeBtn.nextSibling);
+    }
+    content.appendChild(wrapper);
+    wrapper.dataset.frHtml = wrapper.innerHTML;
+  });
+}
+
+function swapModalLanguage(lang) {
+  if (!document.querySelector('.modal-translatable')) return;
+  document.querySelectorAll('.modal-translatable').forEach((wrapper) => {
+    const id = wrapper.id.replace(/^modalBody-/, '');
+    if (lang === 'en' && window.MODAL_HTML_EN && window.MODAL_HTML_EN[id]) {
+      wrapper.innerHTML = window.MODAL_HTML_EN[id];
+    } else if (wrapper.dataset.frHtml) {
+      wrapper.innerHTML = wrapper.dataset.frHtml;
+    }
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+  initModalI18n();
   const saved = localStorage.getItem('portfolio-lang') || 'fr';
   setPortfolioLanguage(saved);
   document.querySelectorAll('.lang-btn').forEach((btn) => {
