@@ -34,7 +34,7 @@ window.PORTFOLIO_I18N = {
       present: 'Présent',
       sorbonne: {
         school: 'Université Sorbonne Paris Nord',
-        degree: 'Master Science et Génie des Matériaux — Modélisation et simulation mécanique (M1)',
+        degree: 'Master Science et Génie des Matériaux : Modélisation et simulation mécanique — M1',
         date: '2026 — Présent'
       },
       poitiers: {
@@ -204,7 +204,7 @@ window.PORTFOLIO_I18N = {
       present: 'Present',
       sorbonne: {
         school: 'Université Sorbonne Paris Nord',
-        degree: "Master's (M1) — Materials Science & Engineering: Mechanical Modeling & Simulation",
+        degree: "Master's Materials Science & Engineering: Mechanical Modeling & Simulation — M1",
         date: '2026 — Present'
       },
       poitiers: {
