@@ -1,7 +1,7 @@
 window.MODAL_HTML_EN = {
   modalPoteyage: `
 <div class="modal-header">
-        <h2>Carbon-coating machine on Cartesian gantry</h2>
+        <h2>Carbon coating machine on a Cartesian gantry</h2>
         <div class="modal-tags">
           <span class="projet-tag">B&amp;R Automation Studio</span>
           <span class="projet-tag">Structured Text</span>
@@ -23,19 +23,19 @@ window.MODAL_HTML_EN = {
 
       <!-- DESCRIPTION -->
       <div class="modal-section">
-        <h3><i class="fas fa-info-circle"></i> Project description</h3>
+        <h3><i class="fas fa-info-circle"></i> Overview</h3>
         <p>
-          This project involved developing and programming the automated cycle of a carbon-coating machine used to deposit a layer of carbon on glass half-molds to ease demolding. The system is based on a Cartesian gantry driven by stepper motors that moves the molds above a fixed burner according to a defined scanning strategy.
+          I programmed the full automatic cycle of a coating machine that deposits carbon on glass half-molds to make demolding easier. Stepper motors drive a Cartesian gantry that moves the molds over a fixed burner along a set scan pattern.
         </p>
         <p style="margin-top: 1rem;">
-          The work consisted of defining the functional cycle parameters, designing the control GRAFCET, programming the cycle in Structured Text, and validating operation in simulation and on the actual installation.
+          I defined the cycle parameters, drew the control GRAFCET, wrote the logic in Structured Text, and checked everything in simulation before testing on the real machine.
         </p>
       </div>
 
       <!-- FONCTION -->
       <div class="modal-section">
-        <h3><i class="fas fa-cog"></i> Function of the developed program</h3>
-        <p style="margin-bottom: 0.75rem;">The program fully automates the carbon-coating cycle:</p>
+        <h3><i class="fas fa-cog"></i> What the program does</h3>
+        <p style="margin-bottom: 0.75rem;">The software runs the entire coating cycle:</p>
         <ul>
           <li>Initialization and homing of X and Y axes</li>
           <li>Positioning at the start point (deltaX, deltaY)</li>
@@ -422,8 +422,8 @@ END_TYPE</pre>
 
       <!-- OBJECTIF -->
       <div class="modal-section">
-        <h3><i class="fas fa-bullseye"></i> Project objective</h3>
-        <p>The project objective was to redesign a spreader part that was initially complex to manufacture in order to offer a simpler, lighter welded-fabrication solution suited to industrial production, while ensuring mechanical strength through simulation.</p>
+        <h3><i class="fas fa-bullseye"></i> Goal</h3>
+        <p>I redesigned a hydraulic spreader that was hard to build, aiming for a simpler welded version that would be lighter and easier to produce in series—then checked strength in simulation.</p>
       </div>
 
       <!-- ANALYSE INITIALE -->
@@ -549,8 +549,8 @@ END_TYPE</pre>
 
       <!-- OBJECTIF -->
       <div class="modal-section">
-        <h3><i class="fas fa-bullseye"></i> Project objective</h3>
-        <p>This CNC programming project involved developing a complete machining program for a 150×100 mm part using the Heidenhain iTNC 530 system. After 2D/3D modeling in SolidWorks, four tools were selected for milling operations (contour, pockets, slots) and drilling. Technological parameters (cutting speed, feed, depth of cut) were optimized for each tool, and the generated program was successfully simulated.</p>
+        <h3><i class="fas fa-bullseye"></i> Goal</h3>
+        <p>I wrote a full machining program for a 150×100 mm part on the Heidenhain iTNC 530. After modeling the part in SolidWorks, I picked four tools for contouring, pockets, slots, and drilling, tuned speeds and feeds for each, and verified the program in simulation.</p>
       </div>
 
       <!-- MODÉLISATION 3D -->
@@ -822,7 +822,7 @@ END_TYPE</pre>
       <!-- RÉSULTAT -->
       <div class="modal-section">
         <h3><i class="fas fa-check-circle"></i> Final result</h3>
-        <p>This project covered the full CAD/CAM/CNC digital chain: from 3D modeling in SolidWorks to programming in Heidenhain Klartext, including selection and optimization of machining parameters. The 62-line program covers varied operations (contouring, circular and rectangular pockets, slots, polar pattern drilling) and demonstrates the value of modern digital tools for precision and efficiency in machining.</p>
+        <p>This assignment walked through CAD, CAM, and CNC end to end: SolidWorks modeling, then Heidenhain Klartext programming with tuned cutting data. The 62-line program mixes contours, round and rectangular pockets, slots, and a bolt circle—and shows how digital tools tighten precision on the shop floor.</p>
       </div>
 `,
   modalUsinage: `
@@ -849,8 +849,8 @@ END_TYPE</pre>
 
       <!-- OBJECTIF -->
       <div class="modal-section">
-        <h3><i class="fas fa-bullseye"></i> Project objective</h3>
-        <p>The project objective was to design a machining fixture to locate and hold a cylindrical part during a drilling operation, following principles of isostatic constraint, manufacturing simplicity, and low cost. The fixture had to be ergonomic, rigid, and suited for use on a pillar drill.</p>
+        <h3><i class="fas fa-bullseye"></i> Goal</h3>
+        <p>I designed a fixture to hold a round part for drilling: isostatic locating, easy to make, inexpensive, stiff enough for a pillar drill, and comfortable to use on the shop floor.</p>
       </div>
 
       <!-- ANALYSE PIÈCE -->
@@ -977,8 +977,8 @@ END_TYPE</pre>
 
       <!-- OBJECTIF -->
       <div class="modal-section">
-        <h3><i class="fas fa-bullseye"></i> Project objective</h3>
-        <p>The project objective was to design hydraulic cylinder parts intended for aluminum casting, then validate their mechanical strength by finite element simulation. An optimization phase was then carried out to reduce part mass while preserving mechanical and functional performance.</p>
+        <h3><i class="fas fa-bullseye"></i> Goal</h3>
+        <p>I designed aluminum cast parts for a hydraulic cylinder, ran FEA to confirm they would hold up, then trimmed mass without sacrificing function.</p>
       </div>
 
       <!-- ANALYSE DU SYSTÈME -->
@@ -1276,7 +1276,7 @@ END_TYPE</pre>
       <!-- RÉSULTAT FINAL -->
       <div class="modal-section">
         <h3><i class="fas fa-check-circle"></i> Result</h3>
-        <p>This project developed a complete bevel gearbox preliminary design using a design approach based on solution comparison, real component sizing, CAD integration, and trade-offs between performance, mass, reliability, and industrialization.</p>
+        <p>I sketched out a complete bevel gearbox concept: compared layout options, sized real bearings and gears, modeled everything in CAD, and weighed performance, weight, reliability, and ease of manufacturing.</p>
       </div>
 `,
   modalCSWA: `

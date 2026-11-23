@@ -178,43 +178,43 @@ window.PORTFOLIO_I18N = {
       experience: 'Experience',
       competences: 'Skills',
       certifications: 'Certifications',
-      parcours: 'Journey',
+      parcours: 'Path',
       projets: 'Projects',
       contact: 'Contact',
-      aria3d: 'Go to 3D section'
+      aria3d: 'Jump to 3D section'
     },
     hero: {
-      badge: 'Internship · apprenticeship · freelance',
-      title: 'Student in Mechanical Modeling & Simulation · M1 — Université Sorbonne Paris Nord',
-      desc: 'I am passionate about mechanical engineering—from design and simulation to analysis and materials science. This portfolio brings together the projects I have built along the way. I welcome internship, apprenticeship, and freelance opportunities.',
-      btnProjects: 'My Projects',
+      badge: 'Internships · apprenticeships · freelance',
+      title: 'MSc student — Mechanical modeling & simulation · Université Sorbonne Paris Nord (M1)',
+      desc: 'Mechanical engineering draws me from initial design through simulation, structural analysis, and materials. Here you’ll find a selection of projects from my studies and internships. I’m open to internships, apprenticeships, and freelance work.',
+      btnProjects: 'View projects',
       btn3d: 'Interactive 3D',
-      btnExperience: 'My experience',
-      btnContact: 'Contact Me',
+      btnExperience: 'Experience',
+      btnContact: 'Get in touch',
       altPhoto: 'Profile photo'
     },
     profil: {
-      title: 'About <span>Me</span>',
-      subtitle: 'My background and goals',
-      text: 'My path took me to Poland first—two years in English at Kielce—then to Poitiers, where I earned my BSc in mechanical engineering. I am now in Year 1 at Université Sorbonne Paris Nord, studying mechanical modeling and simulation, building on my CAD and design-office experience with deeper work in mechanical analysis and materials science. I have also tested that in industry: an internship at SAS Archeli on 3D modeling and drawings for Nordic baths, then another at SNRI on valves, dimensioned drawings, and simulation. Internship, apprenticeship, permanent role, or freelance—I would be glad to hear about opportunities that fit my profile.'
+      title: 'About <span>me</span>',
+      subtitle: 'Background and goals',
+      text: 'I studied in English for two years at Kielce (Poland), then completed a bachelor’s in mechanical engineering in Poitiers. I’m now in the first year of my master’s at Université Sorbonne Paris Nord, specializing in mechanical modeling and simulation—deepening structural analysis and materials science on top of the CAD and design work I did earlier. Industry internships at SAS Archeli (3D modeling and drawings for Nordic baths) and SNRI (industrial valves, detail drawings, simulation) grounded those skills in real projects. Whether it’s an internship, apprenticeship, full-time role, or freelance engagement, I’d be happy to talk.'
     },
     formation: {
       title: '<span>Education</span>',
-      subtitle: 'My academic path',
+      subtitle: 'Academic background',
       present: 'Present',
       sorbonne: {
         school: 'Université Sorbonne Paris Nord',
-        degree: "Master's Materials Science & Engineering: Mechanical Modeling & Simulation — M1",
+        degree: 'MSc Materials Science & Engineering — Mechanical modeling & simulation (Year 1)',
         date: '2026 — Present'
       },
       poitiers: {
         school: 'University of Poitiers',
-        degree: 'BSc Mechanical Engineering — Year 3',
+        degree: 'Bachelor’s in Mechanical Engineering',
         date: '2025 — 2026'
       },
       kielce: {
         school: 'Kielce University of Technology',
-        degree: 'BSc Mechanical Engineering — Years 1 & 2',
+        degree: 'Bachelor’s in Mechanical Engineering — Years 1 & 2',
         date: '2023 — 2025'
       },
       locSorbonne: 'Villetaneuse, France',
@@ -293,44 +293,44 @@ window.PORTFOLIO_I18N = {
       }
     },
     experience: {
-      title: 'Professional <span>Experience</span>',
+      title: 'Work <span>experience</span>',
       subtitle: 'Internships',
       archeli: {
         location: 'Tavaux, Bourgogne-Franche-Comté',
-        role: 'Intern — Technical drafting & parametric 3D modeling — Nordic baths',
-        dates: 'April 2026 — June 2026',
+        role: 'Intern — Technical drawings & parametric 3D modeling (Nordic baths)',
+        dates: 'April — June 2026',
         items: [
           'Parametric 3D modeling of Nordic baths in SOLIDWORKS.',
-          'Accurate shop-floor measurements (wood parts, assemblies, tubs, equipment).',
-          'Full modeling of parts and assemblies.',
-          'General and detailed dimensioned drawings.',
-          'Exploded views and technical sections.',
-          'Manufacturing-ready documentation packages.',
-          'Product specification sheets.',
-          'BOMs (wood, hardware, equipment, options).',
-          'Manufacturing procedure documentation.',
-          'Customer installation plans.',
-          'Review of current methods, optimization opportunities, and actionable improvements.',
-          'Supporting gradual workshop organization.'
+          'On-site measurements: wood components, assemblies, tubs, and equipment.',
+          'Part and assembly modeling.',
+          'Assembly layouts and fully dimensioned detail drawings.',
+          'Exploded views and section views.',
+          'Release packages ready for production.',
+          'Product data sheets.',
+          'Bills of materials (wood, hardware, equipment, options).',
+          'Written manufacturing procedures.',
+          'Customer installation drawings.',
+          'Review of existing workflows; identified improvements and proposed practical changes.',
+          'Helped organize and structure the workshop over time.'
         ]
       },
       snri: {
         location: 'Ruffec, Charente',
-        role: 'Intern — Methods office (CAD / technical drafting)',
-        dates: 'July 2026 — August 2026',
+        role: 'Intern — Methods engineering (CAD / drafting)',
+        dates: 'July — August 2026',
         items: [
-          'SolidWorks 3D modeling of an industrial valve body (raw, semi-finished, and machined states).',
-          'Dimensioned drawings for manufacturing and subcontractors (sections, detail views, tolerances, surface finishes).',
-          'Integration of models and drawings into the database and EDMS, and BOM updates.',
-          'Improvement of an Excel self-inspection sheet for valve quality control.',
-          'Reverse engineering of a broken machine part (turret shaft): measurement, modeling, and drafting.',
-          'Part improvement and strength verification using SolidWorks simulation.'
+          'SolidWorks modeling of an industrial valve body (as-cast, semi-finished, and machined states).',
+          'Detail drawings for in-house manufacturing and subcontractors: sections, detail views, tolerances, and surface finish callouts.',
+          'Upload of models and drawings to the PLM/EDM system; BOM updates.',
+          'Redesigned an Excel self-check sheet for valve quality inspection.',
+          'Reverse-engineered a broken turret shaft: measured, modeled, and drafted the part.',
+          'Refined the design and checked strength in SolidWorks Simulation.'
         ]
       }
     },
     skills: {
-      title: 'Skills & <span>Expertise</span>',
-      subtitle: 'My tools and know-how',
+      title: 'Skills & <span>tools</span>',
+      subtitle: 'Software and technical strengths',
       all: 'All',
       meca: 'Mechanical Engineering',
       auto: 'Automation',
@@ -340,53 +340,53 @@ window.PORTFOLIO_I18N = {
     },
     langues: {
       title: '<span>Languages</span>',
-      subtitle: 'My language skills',
+      subtitle: 'Spoken languages',
       english: 'English',
       french: 'French',
       arabic: 'Arabic',
-      native: 'Native language'
+      native: 'Native speaker'
     },
     cert: {
-      title: 'My <span>Certifications</span>',
-      subtitle: 'Professional certifications obtained',
+      title: '<span>Certifications</span>',
+      subtitle: 'Credentials',
       date: 'February 2026'
     },
     parcours: {
-      title: 'My <span>Journey</span>',
-      subtitle: 'Key milestones in my education',
+      title: 'My <span>path</span>',
+      subtitle: 'Study and internship timeline',
       tabUni: 'University',
       tabStage: 'Internship',
       tabArcheli: 'Archeli',
       tabSnri: 'SNRI',
-      tabAria: 'Poitiers: university or internships',
-      kielceText: 'Two years of study in English at Kielce University of Technology, Poland, where I built strong mechanical engineering fundamentals. I worked on CNC machines and gained a solid understanding of manufacturing processes. This international experience improved my English and multicultural adaptability.',
-      poitiersText: 'Since joining the University of Poitiers (Year 3), I have completed many hands-on mechanical design projects, significantly strengthening my SolidWorks skills. I discovered automation with B&R Automation Studio and gained a good foundation in ST programming. These projects shaped a rigorous approach to mechanical engineering.',
+      tabAria: 'Poitiers: university track or internships',
+      kielceText: 'I spent two years studying in English at Kielce University of Technology in Poland, building core mechanical engineering skills. I worked with CNC equipment and learned how parts are actually made—while getting comfortable in an international, English-speaking environment.',
+      poitiersText: 'At the University of Poitiers I joined lab and design projects that pushed my SolidWorks skills forward. I also picked up automation with B&R Automation Studio and Structured Text. Together, those projects trained me to think like a design engineer.',
       stageBanner: 'SAS Archeli — Nordic baths',
       stageTitle: 'Internship — SAS Archeli',
-      stageText: 'Intern: technical drafting and parametric 3D modeling (SOLIDWORKS), shop surveys, drawings, BOMs, and manufacturing files. <a class="inline-link" href="#experience-archeli">View mission details ↓</a>',
+      stageText: 'Technical drawings and parametric 3D in SOLIDWORKS: site surveys, layouts, BOMs, and manufacturing documentation. <a class="inline-link" href="#experience-archeli">Full role description ↓</a>',
       snriBanner: 'SNRI — High Performance Valves',
       snriTitle: 'Internship — SNRI',
-      snriText: 'Methods-office intern: industrial valve CAD, technical drawings, EDMS, and SolidWorks simulation. <a class="inline-link" href="#experience-snri">View mission details ↓</a>'
+      snriText: 'Methods engineering: valve CAD, production drawings, document management, and SolidWorks simulation. <a class="inline-link" href="#experience-snri">Full role description ↓</a>'
     },
     projets: {
-      title: 'Project <span>Gallery</span>',
-      subtitle: 'Design-office achievements',
-      all: 'All projects',
-      meca: 'Mechanical Engineering',
+      title: 'Project <span>gallery</span>',
+      subtitle: 'Mechanical design coursework and assignments',
+      all: 'All',
+      meca: 'Mechanical engineering',
       auto: 'Automation',
-      ridoir: { title: 'Hydraulic crowder — Redesigned welded assembly', desc: 'Redesign and optimization of a welded crowder: simplification, FEA simulation, and 32% weight reduction.' },
-      multi: { title: 'Hydraulic pressure multiplier', desc: 'Design and optimization of aluminum cast parts for a hydraulic cylinder: head and base, validated by FEA.' },
-      usinage: { title: 'Machining fixture — Drilling cylindrical parts', desc: 'Isostatic machining fixture for drilling cylindrical parts on a column drill.' },
-      cnc: { title: 'CNC programming — Heidenhain iTNC 530', desc: 'Complete machining program for a 150×100 mm part: profiling, pockets, slots, and drilling.' },
-      renvoi: { title: 'Aerospace bevel gearbox — CAD design', desc: 'Bevel gearbox design: bearing sizing, gear modeling, and comparison of two housing architectures.' },
-      poteyage: { title: 'Carbon coating machine on Cartesian gantry', desc: 'Automated coating cycle for depositing carbon on glass half-molds, with zigzag scanning on a Cartesian gantry.' },
+      ridoir: { title: 'Hydraulic rib — Redesigned welded structure', desc: 'Reworked a welded hydraulic rib: simpler geometry, FEA validation, 32% lighter.' },
+      multi: { title: 'Hydraulic pressure intensifier', desc: 'Aluminum sand-cast cylinder head and base, optimized and checked with FEA.' },
+      usinage: { title: 'Drilling fixture for cylindrical parts', desc: 'Isostatic fixture to drill round workpieces on a pillar drill.' },
+      cnc: { title: 'CNC programming — Heidenhain iTNC 530', desc: 'Full program for a 150×100 mm part: contours, pockets, slots, and holes.' },
+      renvoi: { title: 'Aerospace bevel gearbox — CAD study', desc: 'Sizing bearings, modeling gears, comparing two housing layouts.' },
+      poteyage: { title: 'Carbon coating machine on a Cartesian gantry', desc: 'Automatic carbon deposit on glass half-molds, scanned in a zigzag pattern on a gantry.' },
       tagConception: 'Design',
       tagFonderie: 'Casting',
-      tagIsostatism: 'Isostaticity'
+      tagIsostatism: 'Isostatic mounting'
     },
     models3d: {
-      subtitle: 'Interactive 3D models of parts I created in CAD to understand their mechanical function',
-      help: 'Click and drag to rotate, use the scroll wheel to zoom.',
+      subtitle: 'Interactive 3D models—parts I modeled in CAD to explore how they work',
+      help: 'Drag to rotate · scroll to zoom',
       arm: '4-DOF robotic arm',
       alternator: 'Alternator',
       generator: 'Synchronous generator',
@@ -398,16 +398,16 @@ window.PORTFOLIO_I18N = {
       lego: 'Lego figure'
     },
     contact: {
-      title: 'Contact <span>Me</span>',
-      subtitle: 'Feel free to reach out',
+      title: '<span>Contact</span>',
+      subtitle: 'Get in touch',
       phone: 'Phone'
     },
-    footer: '© 2026 — Abdeldjallil Seif E. Zerrouni · Mechanical Engineering Portfolio',
+    footer: '© 2026 — Abdeldjallil Seif E. Zerrouni · Mechanical engineering portfolio',
     aria: {
-      theme: 'Toggle theme',
-      menu: 'Menu',
+      theme: 'Light / dark mode',
+      menu: 'Open menu',
       backTop: 'Back to top',
-      lang: 'Choose language'
+      lang: 'Language'
     }
   }
 };
